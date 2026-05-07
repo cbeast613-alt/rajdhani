@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advance Diploma — Rajdhani Computer Education</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root { --red: #cc0000; --dark-red: #990000; --blue: #1a237e; --light-blue: #1565c0; --gray: #f5f5f5; --text: #333; }
+  body { font-family: 'Roboto', sans-serif; color: var(--text); overflow-x: hidden; }
+
+  /* ── TOPBAR ── */
+  .topbar {
+    background: var(--blue);
+    color: white;
+    padding: 8px 40px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .topbar a { color: #90caf9; text-decoration: none; }
+
+  /* ── NAV ── */
+  nav {
+    background: white;
+    padding: 14px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    gap: 12px;
+  }
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;        /* BUG FIX: allows flex child to shrink below content size */
+    flex: 1;
+  }
+  .logo-area img { height: 55px; flex-shrink: 0; }
+  .logo-text { min-width: 0; }
+  .logo-text h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: var(--red);
+    font-weight: 800;
+    white-space: nowrap;    /* BUG FIX: prevent wrapping; media query overrides */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .logo-text p { font-size: 11px; color: var(--blue); }
+  .back-btn {
+    background: var(--blue);
+    color: white;
+    padding: 9px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    flex-shrink: 0;         /* BUG FIX: prevent button from shrinking away */
+    white-space: nowrap;
+  }
+  .back-btn:hover { background: var(--light-blue); }
+
+  /* ── HERO ── */
+  .course-hero {
+    background: linear-gradient(135deg, var(--blue), #0d47a1);
+    color: white;
+    padding: 60px 40px;
+    text-align: center;
+  }
+  .course-hero .icon { font-size: 64px; margin-bottom: 16px; }
+  .course-hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    word-break: break-word;  /* BUG FIX: prevents overflow on narrow screens */
+  }
+  .course-hero p {
+    font-size: 16px;
+    opacity: 0.85;
+    max-width: 600px;
+    margin: 0 auto 24px;
+    line-height: 1.7;
+  }
+  .badges {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .badge {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  /* ── CONTENT ── */
+  .content { max-width: 1000px; margin: 0 auto; padding: 60px 40px; }
+  .course-img {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    object-fit: cover;
+    height: 320px;
+    display: block;
+  }
+  .section-block { margin-bottom: 48px; }
+  .section-block h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--blue);
+    margin-bottom: 8px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--red);
+    display: inline-block;
+    max-width: 100%;         /* BUG FIX: inline-block heading won't overflow container */
+    word-break: break-word;
+  }
+  .section-block p { font-size: 16px; line-height: 1.8; color: #555; margin-top: 16px; }
+
+  /* ── TOPICS GRID ── */
+  .topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* BUG FIX: reduced min from 260→220 */
+    gap: 14px;
+    margin-top: 20px;
+  }
+  .topic-item {
+    background: var(--gray);
+    border-left: 4px solid var(--red);
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+    font-size: 15px;
+    font-weight: 500;
+    word-break: break-word;
+  }
+  .topic-item::before { content: "✓ "; color: var(--red); font-weight: 700; }
+
+  /* ── CAREERS ── */
+  .careers-wrap { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+  .career-tag {
+    background: var(--blue);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  /* ── HIGHLIGHT BOX ── */
+  .highlight-box {
+    background: #e8f4fd;
+    border-left: 5px solid var(--blue);
+    border-radius: 0 12px 12px 0;
+    padding: 20px 24px;
+    margin-top: 20px;
+  }
+  .highlight-box h4 { font-family: 'Poppins', sans-serif; color: var(--blue); font-size: 16px; margin-bottom: 8px; }
+  .highlight-box p { color: #444; font-size: 15px; margin-top: 0; }
+
+  /* ── FEE BOX ── */
+  .fee-box {
+    background: linear-gradient(135deg, var(--red), var(--dark-red));
+    color: white;
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+  }
+  .fee-box h3 { font-family: 'Poppins', sans-serif; font-size: 18px; margin-bottom: 10px; opacity: 0.9; }
+  .fee-box .fee {
+    font-family: 'Poppins', sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+    word-break: break-word;   /* BUG FIX: ₹ price won't overflow on mobile */
+    overflow-wrap: break-word;
+  }
+  .fee-box p { font-size: 14px; opacity: 0.8; margin-top: 8px; }
+  .enroll-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: white;
+    color: var(--red);
+    padding: 14px 36px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  .enroll-btn:hover { background: #f5f5f5; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0a0a0a;
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    padding: 20px 40px;
+    font-size: 13px;
+  }
+  footer span { color: var(--red); }
+
+  /* ════════════════════════════════════
+     RESPONSIVE BREAKPOINTS
+  ════════════════════════════════════ */
+
+  /* ── Tablet (max 900px) ── */
+  @media (max-width: 900px) {
+    .topbar { padding: 8px 24px; }
+    nav { padding: 12px 24px; }
+    .content { padding: 48px 24px; }
+    .course-hero { padding: 50px 24px; }
+    .course-hero h1 { font-size: 34px; }
+  }
+
+  /* ── Mobile Large (max 768px) ── */
+  @media (max-width: 768px) {
+    .topbar { padding: 8px 16px; font-size: 12px; justify-content: center; text-align: center; }
+    nav { padding: 10px 16px; flex-wrap: wrap; }
+    .logo-area { gap: 10px; }
+    .logo-area img { height: 42px; }
+    .logo-text h1 { font-size: 14px; white-space: normal; }  /* BUG FIX: allow wrap on mobile */
+    .logo-text p { font-size: 10px; }
+    .back-btn { padding: 8px 14px; font-size: 13px; }
+    .course-hero { padding: 40px 16px; }
+    .course-hero .icon { font-size: 48px; }
+    .course-hero h1 { font-size: 26px; }
+    .course-hero p { font-size: 14px; }
+    .badge { font-size: 12px; padding: 6px 14px; }
+    .content { padding: 36px 16px; }
+    .course-img { height: 220px; }    /* BUG FIX: shorter image on mobile */
+    .section-block h2 { font-size: 22px; }
+    .section-block p { font-size: 15px; }
+    .topics-grid { grid-template-columns: 1fr; }  /* BUG FIX: single column on mobile */
+    .topic-item { font-size: 14px; }
+    .career-tag { font-size: 13px; padding: 7px 14px; }
+    .fee-box { padding: 24px 16px; }
+    .fee-box .fee { font-size: 28px; }   /* BUG FIX: smaller fee on mobile */
+    .fee-box h3 { font-size: 16px; }
+    .enroll-btn { padding: 12px 24px; font-size: 15px; } /* BUG FIX: smaller btn on mobile */
+    footer { padding: 16px; font-size: 12px; }
+  }
+
+  /* ── Mobile Small (max 480px) ── */
+  @media (max-width: 480px) {
+    .topbar { flex-direction: column; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; }
+    nav { gap: 8px; }
+    .logo-area img { height: 36px; }
+    .logo-text h1 { font-size: 13px; }
+    .back-btn { padding: 7px 12px; font-size: 12px; }
+    .course-hero h1 { font-size: 22px; }
+    .course-hero .icon { font-size: 40px; }
+    .badge { font-size: 11px; padding: 5px 12px; }
+    .section-block h2 { font-size: 19px; }
+    .fee-box .fee { font-size: 24px; }
+    .highlight-box { padding: 14px 16px; }
+    .highlight-box h4 { font-size: 14px; }
+    .highlight-box p { font-size: 13px; }
+  }
+
+  /* ── Extra Small (max 360px) ── */
+  @media (max-width: 360px) {
+    .logo-text h1 { font-size: 11px; }
+    .back-btn { font-size: 11px; padding: 6px 10px; }
+    .course-hero h1 { font-size: 20px; }
+    .fee-box .fee { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div>📍 A-603, Shahbad Dairy, Near Sec-16 Rohini, Delhi-110042</div>
+  <div>📞 (011) 278-22157 | 📧 <a href="mailto:cbeast613@gmail.com" style="color:#90caf9;">cbeast613@gmail.com</a></div>
+</div>
+
+<nav>
+  <div class="logo-area">
+    <img src="rcelogo.jpeg" alt="RCE Logo" onerror="this.style.display='none'">
+  </div>
+  <a href="../index.html" class="back-btn">← Back to Home</a>
+</nav>
+
+<div class="course-hero">
+  <div class="icon">🎓</div>
+  <h1>Advance Diploma Course</h1>
+  <p>Our most comprehensive 1 year program covering multiple high demand skills — the best investment for your career!</p>
+  <div class="badges">
+    <span class="badge">⏱ Duration: 1 Year</span>
+    <span class="badge">📍 Delhi, Rohini</span>
+    <span class="badge">🏆 Diploma Certificate</span>
+  </div>
+</div>
+
+<div class="content">
+  <img src="advance-diploma.jpeg" alt="Advance Diploma" class="course-img">
+
+  <div class="section-block">
+    <h2>About This Course</h2>
+    <p>Our Advance Diploma is the most popular and comprehensive program at Rajdhani Computer Education. This 1 year course combines multiple high demand skills into one powerful diploma. Instead of doing 3 or 4 separate courses, you learn everything together and save both time and money. This is the perfect choice for students who want to be fully job ready across multiple domains of computer education.</p>
+
+    <div class="highlight-box">
+      <h4>⭐ Why Choose Advance Diploma?</h4>
+      <p>You get the knowledge of 6+ courses in just 1 year! Students who complete this diploma are hired faster and earn higher salaries because they can handle multiple job roles.</p>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h2>What You Will Learn</h2>
+    <div class="topics-grid">
+      <div class="topic-item">Basic Computer &amp; MS Office Complete</div>
+      <div class="topic-item">Graphic Design — Photoshop &amp; CorelDRAW</div>
+      <div class="topic-item">Web Designing — HTML, CSS, JavaScript</div>
+      <div class="topic-item">Tally with GST &amp; Accounting</div>
+      <div class="topic-item">Desktop Publishing — PageMaker &amp; InDesign</div>
+      <div class="topic-item">Hardware &amp; Networking Basics</div>
+      <div class="topic-item">Internet &amp; Email Communication</div>
+      <div class="topic-item">Project Work &amp; Portfolio Building</div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h2>Career Opportunities</h2>
+    <p>After completing this course you can work as:</p>
+    <div class="careers-wrap">
+      <span class="career-tag">Multi-Skilled IT Professional</span>
+      <span class="career-tag">Office Manager</span>
+      <span class="career-tag">Digital Marketing Executive</span>
+      <span class="career-tag">IT Support Engineer</span>
+      <span class="career-tag">Web Designer</span>
+      <span class="career-tag">Graphic Designer</span>
+      <span class="career-tag">Accountant</span>
+      <span class="career-tag">Freelancer</span>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h2>Course Fee</h2>
+    <div class="fee-box">
+      <h3>Course Investment</h3>
+      <div class="fee">₹12,000 – ₹18,000</div>
+      <p style="color:white;opacity:1;">Flexible payment options available | Scholarships for deserving students</p>
+      <a href="../index.html#contact" class="enroll-btn">Enroll Now 🚀</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 <span>Rajdhani Computer Education</span> | Regd. No. 63906 | www.rcews.com</p>
+</footer>
+</body>
+</html>
