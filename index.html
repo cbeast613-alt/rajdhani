@@ -1,1443 +1,2409 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<link rel="icon" type="image/png" href="rcelogo.png">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rajdhani Computer Education — Rohini Delhi</title>
-<meta name="description" content="Rajdhani Computer Education in Rohini Delhi offers Graphic Design, Web Designing, Hardware Networking, Tally GST, Multimedia & Basic Computer courses. Govt. Registered | 10+ Years Experience | Affordable Fees.">
-<meta name="keywords" content="computer institute Rohini, graphic design course Delhi, tally GST course, hardware networking, web designing course Rohini, computer classes near me">
-<meta name="author" content="Rajdhani Computer Education">
-<meta name="robots" content="index, follow">
-<meta property="og:title" content="Rajdhani Computer Education — Rohini Delhi">
-<meta property="og:description" content="Best computer institute in Rohini Delhi. Learn Graphic Design, Web Designing, Tally, Hardware & more. Govt. Registered.">
-<meta property="og:image" content="https://rcews.com/images/logo.png">
-<meta property="og:url" content="https://rcews.com">
-<meta property="og:type" content="website">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  /* ── RESET & BASE ── */
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-  :root {
-    --red: #cc0000; --dark-red: #990000;
-    --blue: #1a237e; --light-blue: #1565c0;
-    --gray: #f5f5f5; --dark: #111111; --text: #333333;
-  }
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Roboto', sans-serif; color: var(--text); overflow-x: hidden; font-size: 16px; line-height: 1.5; }
-  img { max-width: 100%; height: auto; display: block; }
-  a { text-decoration: none; }
+  <link rel="icon" type="image/png" href="rcelogo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rajdhani Computer Education — Rohini Delhi</title>
+  <meta name="description"
+    content="Rajdhani Computer Education in Rohini Delhi offers Graphic Design, Web Designing, Hardware Networking, Tally GST, Multimedia & Basic Computer courses. Govt. Registered | 10+ Years Experience | Affordable Fees.">
+  <meta name="keywords"
+    content="computer institute Rohini, graphic design course Delhi, tally GST course, hardware networking, web designing course Rohini, computer classes near me">
+  <meta name="author" content="Rajdhani Computer Education">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Rajdhani Computer Education — Rohini Delhi">
+  <meta property="og:description"
+    content="Best computer institute in Rohini Delhi. Learn Graphic Design, Web Designing, Tally, Hardware & more. Govt. Registered.">
+  <meta property="og:image" content="https://rcews.com/images/logo.png">
+  <meta property="og:url" content="https://rcews.com">
+  <meta property="og:type" content="website">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    /* ── RESET & BASE ── */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  /* ── TOPBAR ── */
-  .topbar {
-    background: var(--blue);
-    color: white;
-    padding: 8px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 13px;
-    flex-wrap: wrap;
-    gap: 4px;
-  }
-  .topbar-icon {
-    color: #90caf9;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    transition: color 0.2s;
-    white-space: nowrap;
-  }
-  .topbar-icon:hover { color: white; }
-  .topbar-right {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-  .topbar-divider { color: rgba(255,255,255,0.4); }
+    :root {
+      --red: #cc0000;
+      --dark-red: #990000;
+      --blue: #1a237e;
+      --light-blue: #1565c0;
+      --gray: #f5f5f5;
+      --dark: #111111;
+      --text: #333333;
+    }
 
-  /* ── NAVBAR ── */
-  nav {
-    background: white;
-    padding: 14px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 999;
-  }
-  .logo-area { display: flex; align-items: center; gap: 14px; }
-  .logo-area img { height: 60px; width: auto; flex-shrink: 0; }
-  .logo-text h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    color: var(--red);
-    font-weight: 800;
-    line-height: 1.2;
-  }
-  .logo-text p { font-size: 12px; color: var(--blue); font-weight: 500; }
-  .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
-  .nav-links a {
-    color: var(--dark);
-    font-weight: 500;
-    font-size: 15px;
-    transition: color 0.2s;
-    white-space: nowrap;
-  }
-  .nav-links a:hover { color: var(--red); }
-  .nav-btn {
-    background: var(--red);
-    color: white;
-    padding: 10px 24px;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 14px;
-    transition: background 0.2s;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-  .nav-btn:hover { background: var(--dark-red); }
-  .hamburger {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: var(--red);
-    padding: 4px;
-    flex-shrink: 0;
-    line-height: 1;
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  /* ── MOBILE MENU ── */
-  .mobile-menu {
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 75%;
-    max-width: 300px;
-    height: 100vh;
-    background: white;
-    padding: 24px;
-    box-shadow: -8px 0 24px rgba(0,0,0,0.15);
-    z-index: 9999;
-    transition: right 0.3s ease;
-    overflow-y: auto;
-  }
-  .mobile-menu.open { right: 0; display: flex; }
-  .menu-overlay {
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.5);
-    z-index: 9998;
-  }
-  .menu-overlay.open { display: block; }
-  .menu-close {
-    background: none;
-    border: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: var(--red);
-    align-self: flex-end;
-    margin-bottom: 20px;
-  }
-  .menu-logo {
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    color: var(--red);
-    font-weight: 800;
-    margin-bottom: 24px;
-    padding-bottom: 16px;
-    border-bottom: 2px solid #f0f0f0;
-  }
-  .mobile-menu a {
-    color: var(--dark);
-    font-weight: 500;
-    font-size: 16px;
-    padding: 14px 0;
-    border-bottom: 1px solid #f5f5f5;
-    transition: color 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .mobile-menu a:hover { color: var(--red); }
-  .mobile-enroll {
-    background: var(--red) !important;
-    color: white !important;
-    text-align: center;
-    border-radius: 8px;
-    padding: 14px !important;
-    font-weight: 700 !important;
-    margin-top: 16px;
-    border-bottom: none !important;
-    justify-content: center !important;
-  }
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
+      font-size: 16px;
+      line-height: 1.5;
+    }
 
-  /* ── HERO ── */
-  .hero {
-    background: linear-gradient(135deg, var(--blue) 0%, #0d47a1 50%, var(--red) 100%);
-    color: white;
-    padding: 70px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap;
-    position: relative;
-    overflow: hidden;
-    min-height: 520px;
-  }
-  .hero::before {
-    content: '';
-    position: absolute;
-    width: 500px; height: 500px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.04);
-    top: -100px; right: -100px;
-    pointer-events: none;
-  }
-  .hero-text { max-width: 500px; z-index: 1; flex: 1 1 300px; }
-  .hero-badge {
-    display: inline-block;
-    background: rgba(255,255,255,0.2);
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 13px;
-    margin-bottom: 20px;
-    border: 1px solid rgba(255,255,255,0.3);
-  }
-  .hero-text h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 42px;
-    font-weight: 800;
-    line-height: 1.15;
-    margin-bottom: 20px;
-  }
-  .hero-text p { font-size: 16px; margin-bottom: 24px; line-height: 1.7; opacity: 0; }
-  .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; opacity: 0; margin-bottom: 28px; }
-  .btn-primary {
-    background: var(--red);
-    color: white;
-    padding: 14px 32px;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 15px;
-    transition: transform 0.2s, background 0.2s;
-    display: inline-block;
-  }
-  .btn-primary:hover { background: var(--dark-red); transform: translateY(-2px); }
-  .btn-secondary {
-    background: transparent;
-    color: white;
-    padding: 14px 32px;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 15px;
-    border: 2px solid white;
-    transition: all 0.2s;
-    display: inline-block;
-  }
-  .btn-secondary:hover { background: white; color: var(--blue); }
-  .typing-box {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: rgba(0,0,0,0.25);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 10px;
-    padding: 10px 18px;
-    backdrop-filter: blur(6px);
-    opacity: 0;
-    flex-wrap: wrap;
-  }
-  .typing-box.animate { animation: slideInUp 0.8s ease 0.5s forwards; }
-  .typing-label {
-    font-size: 13px;
-    color: rgba(255,255,255,0.7);
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    white-space: nowrap;
-  }
-  .typing-text {
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    color: #ffcc00;
-    min-width: 160px;
-  }
-  .typing-cursor {
-    display: inline-block;
-    width: 2px; height: 16px;
-    background: #ffcc00;
-    margin-left: 2px;
-    vertical-align: middle;
-    animation: blink 0.7s infinite;
-  }
-  @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
-  .hero-text h1 .word { display: inline-block; opacity: 0; transform: translateY(20px); transition: opacity 0.15s ease, transform 0.15s ease; }
-  .hero-text h1 .word.visible { opacity: 1; transform: translateY(0); }
-  .hero-text h1 .word.highlight { color: #ffcc00; }
-  @keyframes slideInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
-  .hero-text p.animate { animation: slideInUp 0.8s ease 0.1s forwards; }
-  .hero-buttons.animate { animation: slideInUp 0.8s ease 0.3s forwards; }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
 
-  /* ── HERO SLIDER ── */
-  .hero-slider {
-    z-index: 1;
-    width: 400px;
-    height: 380px;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 24px 60px rgba(0,0,0,0.4);
-    flex-shrink: 0;
-    border: 3px solid rgba(255,255,255,0.2);
-    flex: 0 0 400px;
-  }
-  .slide {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    opacity: 0;
-    transition: opacity 0.9s ease-in-out;
-    background: rgba(255,255,255,0.05);
-  }
-  .slide.active { opacity: 1; }
-  .slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .slide-label {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    background: linear-gradient(transparent, rgba(0,0,0,0.65));
-    padding: 28px 16px 14px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    color: white;
-    text-align: center;
-    letter-spacing: 0.5px;
-  }
-  .slider-dots {
-    position: absolute;
-    bottom: 12px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 7px;
-    z-index: 10;
-  }
-  .slider-dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.4);
-    transition: background 0.3s, transform 0.3s;
-    cursor: pointer;
-  }
-  .slider-dot.active { background: #ffcc00; transform: scale(1.3); }
-  .slide-placeholder {
-    width: 100%; height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-  }
-  .slide-placeholder .ph-icon { font-size: 52px; }
-  .slide-placeholder .ph-text { font-family: 'Poppins', sans-serif; font-size: 13px; color: rgba(255,255,255,0.6); text-align: center; line-height: 1.5; }
-  .slide-placeholder .ph-name { font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 700; color: #ffcc00; }
+    a {
+      text-decoration: none;
+    }
 
-  /* ── STATS ── */
-  .stats {
-    background: var(--red);
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    flex-wrap: wrap;
-  }
-  .stat-item { text-align: center; color: white; }
-  .stat-item h2 { font-family: 'Poppins', sans-serif; font-size: 38px; font-weight: 800; }
-  .stat-item p { font-size: 14px; opacity: 0.9; margin-top: 4px; }
+    /* ── TOPBAR ── */
+    .topbar {
+      background: var(--blue);
+      color: white;
+      padding: 8px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
 
-  /* ── SECTIONS ── */
-  .section { padding: 80px 40px; }
-  .section-title { text-align: center; margin-bottom: 50px; }
-  .section-title h2 { font-family: 'Poppins', sans-serif; font-size: 34px; font-weight: 800; color: var(--blue); }
-  .section-title p { color: #666; font-size: 16px; margin-top: 10px; }
-  .section-title .line { width: 60px; height: 4px; background: var(--red); margin: 14px auto 0; border-radius: 2px; }
+    .topbar-icon {
+      color: #90caf9;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
 
-  /* ── COURSES GRID ── */
-  .courses-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  .course-card {
-    background: white;
-    border-radius: 12px;
-    padding: 30px 24px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    border-top: 4px solid var(--red);
-    transition: transform 0.2s, box-shadow 0.2s;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-  .course-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
-  .course-card.popular { border-top: 4px solid #f59e0b; }
-  .popular-badge {
-    position: absolute;
-    top: -12px; right: 16px;
-    background: #f59e0b;
-    color: white;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-family: 'Poppins', sans-serif;
-  }
-  .course-icon {
-    width: 56px; height: 56px;
-    background: linear-gradient(135deg, var(--blue), var(--light-blue));
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 26px;
-    margin-bottom: 18px;
-    flex-shrink: 0;
-  }
-  .course-card h3 { font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 700; color: var(--blue); margin-bottom: 10px; }
-  .course-card p { font-size: 14px; color: #666; line-height: 1.6; flex: 1; }
-  .course-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; flex-wrap: wrap; gap: 8px; }
-  .course-duration { background: #fff3f3; color: var(--red); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; white-space: nowrap; }
-  .read-more {
-    background: var(--blue);
-    color: white;
-    padding: 6px 16px;
-    border-radius: 6px;
-    font-size: 13px;
-    font-weight: 600;
-    transition: background 0.2s;
-    white-space: nowrap;
-  }
-  .read-more:hover { background: var(--light-blue); }
+    .topbar-icon:hover {
+      color: white;
+    }
 
-  /* ── WHY US ── */
-  .why-section { background: var(--gray); }
-  .why-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 24px;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  .why-card {
-    background: white;
-    border-radius: 12px;
-    padding: 28px 22px;
-    text-align: center;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    transition: transform 0.2s;
-  }
-  .why-card:hover { transform: translateY(-4px); }
-  .why-icon { font-size: 38px; margin-bottom: 14px; }
-  .why-card h3 { font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
-  .why-card p { font-size: 13px; color: #777; line-height: 1.6; }
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
 
-  /* ── CERTIFICATIONS ── */
-  .cert-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  .cert-badge {
-    background: white;
-    border: 2px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 16px 24px;
-    font-weight: 700;
-    font-size: 14px;
-    color: var(--blue);
-    text-align: center;
-    min-width: 130px;
-    transition: border-color 0.2s, transform 0.2s;
-    flex: 1 1 130px;
-    max-width: 200px;
-  }
-  .cert-badge:hover { border-color: var(--red); transform: translateY(-3px); }
-  .cert-badge span { display: block; font-size: 24px; margin-bottom: 6px; }
+    .topbar-divider {
+      color: rgba(255, 255, 255, 0.4);
+    }
 
-  /* ── TESTIMONIALS ── */
-  .testimonials-section { background: var(--gray); }
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  .testi-card {
-    background: white;
-    border-radius: 12px;
-    padding: 28px 24px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
-    transition: transform 0.2s;
-    display: flex;
-    flex-direction: column;
-  }
-  .testi-card:hover { transform: translateY(-4px); }
-  .testi-quote { font-size: 52px; color: var(--red); line-height: 0.8; margin-bottom: 12px; font-family: Georgia, serif; opacity: 0.25; }
-  .testi-stars { color: #f59e0b; font-size: 15px; letter-spacing: 2px; margin-bottom: 10px; }
-  .testi-text { font-size: 14px; color: #555; line-height: 1.75; margin-bottom: 20px; font-style: italic; flex: 1; }
-  .testi-author { display: flex; align-items: center; gap: 12px; border-top: 1px solid #f0f0f0; padding-top: 14px; margin-top: auto; }
-  .testi-avatar {
-    width: 44px; height: 44px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--blue), var(--light-blue));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: 700;
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    flex-shrink: 0;
-  }
-  .testi-name { font-weight: 700; font-size: 14px; color: var(--blue); font-family: 'Poppins', sans-serif; }
-  .testi-course { font-size: 12px; color: var(--red); font-weight: 600; margin-top: 2px; }
+    /* ── NAVBAR ── */
+    nav {
+      background: white;
+      padding: 14px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
 
-  /* ── MAP ── */
-  .map-section { padding: 80px 40px; background: white; }
-  .map-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-  }
-  .map-container iframe { width: 100%; height: 420px; border: none; display: block; }
-  .map-wrapper { position: relative; }
-  .map-info-card {
-    position: absolute;
-    top: 16px; left: 16px;
-    z-index: 10;
-    background: #fff;
-    border-radius: 10px;
-    padding: 12px 14px 10px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.28);
-    width: 200px;
-  }
-  .map-info-card strong { display: block; font-family: 'Poppins',sans-serif; font-size: 12px; color: #1a237e; margin-bottom: 4px; }
-  .map-info-card span { display: block; font-size: 10.5px; color: #555; line-height: 1.5; margin-bottom: 10px; }
-  .map-info-btns { display: flex; gap: 6px; }
-  .map-info-btns a {
-    flex: 1;
-    text-align: center;
-    padding: 6px 4px;
-    border-radius: 6px;
-    font-size: 11px;
-    font-weight: 700;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-  }
-  .map-info-btns a.btn-open { background: #1a237e; }
-  .map-info-btns a.btn-dir { background: #cc0000; }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
-  /* ── CONTACT ── */
-  .contact-section { background: var(--blue); color: white; }
-  .contact-section .section-title h2 { color: white; }
-  .contact-section .section-title p { color: rgba(255,255,255,0.7); }
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  .contact-info h3 { font-family: 'Poppins', sans-serif; font-size: 22px; margin-bottom: 24px; }
-  .contact-item {
-    display: flex;
-    gap: 14px;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    transition: opacity 0.2s;
-  }
-  .contact-item:hover { opacity: 0.85; }
-  .contact-item-icon {
-    width: 42px; height: 42px;
-    background: rgba(255,255,255,0.15);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    flex-shrink: 0;
-    transition: background 0.2s;
-  }
-  .contact-item:hover .contact-item-icon { background: rgba(255,255,255,0.3); }
-  .contact-item-text p { font-size: 13px; opacity: 0.7; color: white; }
-  .contact-item-text strong { font-size: 15px; color: white; word-break: break-word; }
+    .logo-area img {
+      height: 60px;
+      width: auto;
+      flex-shrink: 0;
+    }
 
-  /* ── CONTACT FORM ── */
-  .contact-form { background: white; border-radius: 16px; padding: 32px; }
-  .contact-form h3 { font-family: 'Poppins', sans-serif; color: var(--blue); margin-bottom: 20px; font-size: 20px; }
-  .form-group { margin-bottom: 16px; }
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    width: 100%;
-    padding: 12px 16px;
-    border: 1.5px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 14px;
-    font-family: 'Roboto', sans-serif;
-    outline: none;
-    transition: border-color 0.2s;
-    color: var(--text);
-    background: white;
-    appearance: auto;
-  }
-  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #1a237e; }
-  .form-group input:invalid:not(:placeholder-shown) { border-color: #e53935; }
-  .form-group input:valid:not(:placeholder-shown) { border-color: #43a047; }
-  .form-group textarea { height: 100px; resize: none; }
-  .form-hint { font-size: 11px; color: #999; margin-top: 4px; display: block; }
-  .form-submit {
-    width: 100%;
-    background: var(--red);
-    color: white;
-    padding: 14px;
-    border: none;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    transition: background 0.2s;
-  }
-  .form-submit:hover { background: var(--dark-red); }
-  .form-submit:disabled { background: #aaa; cursor: not-allowed; }
-  .success-msg { display: none; background: #e8f5e9; color: #2e7d32; padding: 14px; border-radius: 8px; text-align: center; font-weight: 600; margin-top: 12px; font-size: 14px; }
-  .error-msg { display: none; background: #ffebee; color: #c62828; padding: 14px; border-radius: 8px; text-align: center; font-weight: 600; margin-top: 12px; font-size: 14px; }
+    .logo-text h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      color: var(--red);
+      font-weight: 800;
+      line-height: 1.2;
+    }
 
-  /* ── FOOTER ── */
-  footer {
-    background: #0a0a0a;
-    color: rgba(255,255,255,0.7);
-    text-align: center;
-    padding: 24px 20px;
-    font-size: 13px;
-    line-height: 1.6;
-  }
-  footer span { color: var(--red); }
+    .logo-text p {
+      font-size: 12px;
+      color: var(--blue);
+      font-weight: 500;
+    }
 
-  /* ── WHATSAPP BUTTON ── */
-  .whatsapp-btn {
-    position: fixed;
-    bottom: 24px; right: 24px;
-    width: 60px; height: 60px;
-    background: #25D366;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 20px rgba(37,211,102,0.5);
-    z-index: 9997;
-    transition: transform 0.2s;
-    animation: wapulse 2s infinite;
-  }
-  .whatsapp-btn:hover { transform: scale(1.1); }
-  .whatsapp-btn svg { width: 32px; height: 32px; fill: white; }
-  .whatsapp-tooltip {
-    position: fixed;
-    bottom: 92px; right: 24px;
-    background: #25D366;
-    color: white;
-    padding: 8px 14px;
-    border-radius: 8px;
-    font-size: 13px;
-    font-weight: 600;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s;
-    z-index: 9997;
-  }
-  .whatsapp-btn:hover + .whatsapp-tooltip { opacity: 1; }
-  @keyframes wapulse {
-    0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
-    70% { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
-    100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
-  }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      align-items: center;
+    }
 
-  /* ════════════════════════════════════
+    .nav-links a {
+      color: var(--dark);
+      font-weight: 500;
+      font-size: 15px;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      color: var(--red);
+    }
+
+    .nav-btn {
+      background: var(--red);
+      color: white;
+      padding: 10px 24px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.2s;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-btn:hover {
+      background: var(--dark-red);
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: var(--red);
+      padding: 4px;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    /* ── MOBILE MENU ── */
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 75%;
+      max-width: 300px;
+      height: 100vh;
+      background: white;
+      padding: 24px;
+      box-shadow: -8px 0 24px rgba(0, 0, 0, 0.15);
+      z-index: 9999;
+      transition: right 0.3s ease;
+      overflow-y: auto;
+    }
+
+    .mobile-menu.open {
+      right: 0;
+      display: flex;
+    }
+
+    .menu-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 9998;
+    }
+
+    .menu-overlay.open {
+      display: block;
+    }
+
+    .menu-close {
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: var(--red);
+      align-self: flex-end;
+      margin-bottom: 20px;
+    }
+
+    .menu-logo {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      color: var(--red);
+      font-weight: 800;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+
+    .mobile-menu a {
+      color: var(--dark);
+      font-weight: 500;
+      font-size: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid #f5f5f5;
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--red);
+    }
+
+    .mobile-enroll {
+      background: var(--red) !important;
+      color: white !important;
+      text-align: center;
+      border-radius: 8px;
+      padding: 14px !important;
+      font-weight: 700 !important;
+      margin-top: 16px;
+      border-bottom: none !important;
+      justify-content: center !important;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--blue) 0%, #0d47a1 50%, var(--red) 100%);
+      color: white;
+      padding: 70px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+      position: relative;
+      overflow: hidden;
+      min-height: 520px;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.04);
+      top: -100px;
+      right: -100px;
+      pointer-events: none;
+    }
+
+    .hero-text {
+      max-width: 500px;
+      z-index: 1;
+      flex: 1 1 300px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .hero-text h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 16px;
+      margin-bottom: 24px;
+      line-height: 1.7;
+      opacity: 0;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      opacity: 0;
+      margin-bottom: 28px;
+    }
+
+    .btn-primary {
+      background: var(--red);
+      color: white;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 15px;
+      transition: transform 0.2s, background 0.2s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: var(--dark-red);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 15px;
+      border: 2px solid white;
+      transition: all 0.2s;
+      display: inline-block;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: var(--blue);
+    }
+
+    .typing-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      padding: 10px 18px;
+      backdrop-filter: blur(6px);
+      opacity: 0;
+      flex-wrap: wrap;
+    }
+
+    .typing-box.animate {
+      animation: slideInUp 0.8s ease 0.5s forwards;
+    }
+
+    .typing-label {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.7);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .typing-text {
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffcc00;
+      min-width: 160px;
+    }
+
+    .typing-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 16px;
+      background: #ffcc00;
+      margin-left: 2px;
+      vertical-align: middle;
+      animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .hero-text h1 .word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.15s ease, transform 0.15s ease;
+    }
+
+    .hero-text h1 .word.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-text h1 .word.highlight {
+      color: #ffcc00;
+    }
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-text p.animate {
+      animation: slideInUp 0.8s ease 0.1s forwards;
+    }
+
+    .hero-buttons.animate {
+      animation: slideInUp 0.8s ease 0.3s forwards;
+    }
+
+    /* ── HERO SLIDER ── */
+    .hero-slider {
+      z-index: 1;
+      width: 400px;
+      height: 380px;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+      flex-shrink: 0;
+      border: 3px solid rgba(255, 255, 255, 0.2);
+      flex: 0 0 400px;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.9s ease-in-out;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .slide-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.65));
+      padding: 28px 16px 14px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: white;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+
+    .slider-dots {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 7px;
+      z-index: 10;
+    }
+
+    .slider-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+      transition: background 0.3s, transform 0.3s;
+      cursor: pointer;
+    }
+
+    .slider-dot.active {
+      background: #ffcc00;
+      transform: scale(1.3);
+    }
+
+    .slide-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    }
+
+    .slide-placeholder .ph-icon {
+      font-size: 52px;
+    }
+
+    .slide-placeholder .ph-text {
+      font-family: 'Poppins', sans-serif;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .slide-placeholder .ph-name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffcc00;
+    }
+
+    /* ── STATS ── */
+    .stats {
+      background: var(--red);
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      text-align: center;
+      color: white;
+    }
+
+    .stat-item h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 38px;
+      font-weight: 800;
+    }
+
+    .stat-item p {
+      font-size: 14px;
+      opacity: 0.9;
+      margin-top: 4px;
+    }
+
+    /* ── SECTIONS ── */
+    .section {
+      padding: 80px 40px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--blue);
+    }
+
+    .section-title p {
+      color: #666;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .section-title .line {
+      width: 60px;
+      height: 4px;
+      background: var(--red);
+      margin: 14px auto 0;
+      border-radius: 2px;
+    }
+
+    /* ── COURSES GRID ── */
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .course-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border-top: 4px solid var(--red);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .course-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+    }
+
+    .course-card.popular {
+      border-top: 4px solid #f59e0b;
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -12px;
+      right: 16px;
+      background: #f59e0b;
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .course-icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--blue), var(--light-blue));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      margin-bottom: 18px;
+      flex-shrink: 0;
+    }
+
+    .course-card h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    .course-card p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .course-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 16px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .course-duration {
+      background: #fff3f3;
+      color: var(--red);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .read-more {
+      background: var(--blue);
+      color: white;
+      padding: 6px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .read-more:hover {
+      background: var(--light-blue);
+    }
+
+    /* ── WHY US ── */
+    .why-section {
+      background: var(--gray);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .why-card {
+      background: white;
+      border-radius: 12px;
+      padding: 28px 22px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+      transition: transform 0.2s;
+    }
+
+    .why-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .why-icon {
+      font-size: 38px;
+      margin-bottom: 14px;
+    }
+
+    .why-card h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+
+    .why-card p {
+      font-size: 13px;
+      color: #777;
+      line-height: 1.6;
+    }
+
+    /* ── CERTIFICATIONS ── */
+    .cert-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .cert-badge {
+      background: white;
+      border: 2px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 16px 24px;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--blue);
+      text-align: center;
+      min-width: 130px;
+      transition: border-color 0.2s, transform 0.2s;
+      flex: 1 1 130px;
+      max-width: 200px;
+    }
+
+    .cert-badge:hover {
+      border-color: var(--red);
+      transform: translateY(-3px);
+    }
+
+    .cert-badge span {
+      display: block;
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-section {
+      background: var(--gray);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .testi-card {
+      background: white;
+      border-radius: 12px;
+      padding: 28px 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+      transition: transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .testi-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .testi-quote {
+      font-size: 52px;
+      color: var(--red);
+      line-height: 0.8;
+      margin-bottom: 12px;
+      font-family: Georgia, serif;
+      opacity: 0.25;
+    }
+
+    .testi-stars {
+      color: #f59e0b;
+      font-size: 15px;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .testi-text {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.75;
+      margin-bottom: 20px;
+      font-style: italic;
+      flex: 1;
+    }
+
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid #f0f0f0;
+      padding-top: 14px;
+      margin-top: auto;
+    }
+
+    .testi-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), var(--light-blue));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 15px;
+      font-family: 'Poppins', sans-serif;
+      flex-shrink: 0;
+    }
+
+    .testi-name {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--blue);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .testi-course {
+      font-size: 12px;
+      color: var(--red);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    /* ── MAP ── */
+    .map-section {
+      padding: 80px 40px;
+      background: white;
+    }
+
+    .map-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 420px;
+      border: none;
+      display: block;
+    }
+
+    .map-wrapper {
+      position: relative;
+    }
+
+    .map-info-card {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      z-index: 10;
+      background: #fff;
+      border-radius: 10px;
+      padding: 12px 14px 10px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
+      width: 200px;
+    }
+
+    .map-info-card strong {
+      display: block;
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+      color: #1a237e;
+      margin-bottom: 4px;
+    }
+
+    .map-info-card span {
+      display: block;
+      font-size: 10.5px;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .map-info-btns {
+      display: flex;
+      gap: 6px;
+    }
+
+    .map-info-btns a {
+      flex: 1;
+      text-align: center;
+      padding: 6px 4px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+    }
+
+    .map-info-btns a.btn-open {
+      background: #1a237e;
+    }
+
+    .map-info-btns a.btn-dir {
+      background: #cc0000;
+    }
+
+    /* ── CONTACT ── */
+    .contact-section {
+      background: var(--blue);
+      color: white;
+    }
+
+    .contact-section .section-title h2 {
+      color: white;
+    }
+
+    .contact-section .section-title p {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .contact-info h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 22px;
+      margin-bottom: 24px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      transition: opacity 0.2s;
+    }
+
+    .contact-item:hover {
+      opacity: 0.85;
+    }
+
+    .contact-item-icon {
+      width: 42px;
+      height: 42px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+      transition: background 0.2s;
+    }
+
+    .contact-item:hover .contact-item-icon {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .contact-item-text p {
+      font-size: 13px;
+      opacity: 0.7;
+      color: white;
+    }
+
+    .contact-item-text strong {
+      font-size: 15px;
+      color: white;
+      word-break: break-word;
+    }
+
+    /* ── CONTACT FORM ── */
+    .contact-form {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+    }
+
+    .contact-form h3 {
+      font-family: 'Poppins', sans-serif;
+      color: var(--blue);
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: 'Roboto', sans-serif;
+      outline: none;
+      transition: border-color 0.2s;
+      color: var(--text);
+      background: white;
+      appearance: auto;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #1a237e;
+    }
+
+    .form-group input:invalid:not(:placeholder-shown) {
+      border-color: #e53935;
+    }
+
+    .form-group input:valid:not(:placeholder-shown) {
+      border-color: #43a047;
+    }
+
+    .form-group textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    .form-hint {
+      font-size: 11px;
+      color: #999;
+      margin-top: 4px;
+      display: block;
+    }
+
+    .form-submit {
+      width: 100%;
+      background: var(--red);
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      transition: background 0.2s;
+    }
+
+    .form-submit:hover {
+      background: var(--dark-red);
+    }
+
+    .form-submit:disabled {
+      background: #aaa;
+      cursor: not-allowed;
+    }
+
+    .success-msg {
+      display: none;
+      background: #e8f5e9;
+      color: #2e7d32;
+      padding: 14px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 600;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    .error-msg {
+      display: none;
+      background: #ffebee;
+      color: #c62828;
+      padding: 14px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 600;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0a0a0a;
+      color: rgba(255, 255, 255, 0.7);
+      text-align: center;
+      padding: 24px 20px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    footer span {
+      color: var(--red);
+    }
+
+    /* ── WHATSAPP BUTTON ── */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+      z-index: 9997;
+      transition: transform 0.2s;
+      animation: wapulse 2s infinite;
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-btn svg {
+      width: 32px;
+      height: 32px;
+      fill: white;
+    }
+
+    .whatsapp-tooltip {
+      position: fixed;
+      bottom: 92px;
+      right: 24px;
+      background: #25D366;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+      z-index: 9997;
+    }
+
+    .whatsapp-btn:hover+.whatsapp-tooltip {
+      opacity: 1;
+    }
+
+    @keyframes wapulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+      }
+
+      70% {
+        box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+
+    /* ════════════════════════════════════
      RESPONSIVE BREAKPOINTS
   ════════════════════════════════════ */
 
-  /* ── LARGE DESKTOP (1200px+) ── */
-  @media (min-width: 1200px) {
-    .hero { padding: 80px 80px; }
-    .section { padding: 80px 80px; }
-    .map-section { padding: 80px 80px; }
-  }
+    /* ── LARGE DESKTOP (1200px+) ── */
+    @media (min-width: 1200px) {
+      .hero {
+        padding: 80px 80px;
+      }
 
-  /* ── TABLET LANDSCAPE (1024px) ── */
-  @media (max-width: 1024px) {
-    .hero-text h1 { font-size: 36px; }
-    .hero-slider { flex: 0 0 340px; width: 340px; height: 320px; }
-    .nav-links { gap: 18px; }
-    .nav-links a { font-size: 14px; }
-    .stats { gap: 40px; }
-    .contact-grid { gap: 28px; }
-  }
+      .section {
+        padding: 80px 80px;
+      }
 
-  /* ── TABLET PORTRAIT (900px) ── */
-  @media (max-width: 900px) {
-    .hero {
-      padding: 50px 24px;
-      text-align: center;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      gap: 32px;
-      min-height: auto;
+      .map-section {
+        padding: 80px 80px;
+      }
     }
-    .hero-text { max-width: 100%; }
-    .hero-text h1 { font-size: 32px; }
-    .hero-buttons { justify-content: center; }
-    .typing-box { justify-content: center; }
-    .hero-slider {
-      flex: none;
-      width: 100%;
-      max-width: 460px;
-      height: 280px;
-      margin: 0 auto;
+
+    /* ── TABLET LANDSCAPE (1024px) ── */
+    @media (max-width: 1024px) {
+      .hero-text h1 {
+        font-size: 36px;
+      }
+
+      .hero-slider {
+        flex: 0 0 340px;
+        width: 340px;
+        height: 320px;
+      }
+
+      .nav-links {
+        gap: 18px;
+      }
+
+      .nav-links a {
+        font-size: 14px;
+      }
+
+      .stats {
+        gap: 40px;
+      }
+
+      .contact-grid {
+        gap: 28px;
+      }
     }
-    .nav-links { display: none; }
-    .nav-btn { display: none; }
-    .hamburger { display: block; }
-    .section { padding: 60px 24px; }
-    .map-section { padding: 60px 24px; }
-  }
 
-  /* ── MOBILE LARGE (768px) ── */
-  @media (max-width: 768px) {
-    .topbar {
-      font-size: 11px;
-      padding: 6px 14px;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 4px;
+    /* ── TABLET PORTRAIT (900px) ── */
+    @media (max-width: 900px) {
+      .hero {
+        padding: 50px 24px;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        min-height: auto;
+      }
+
+      .hero-text {
+        max-width: 100%;
+      }
+
+      .hero-text h1 {
+        font-size: 32px;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .typing-box {
+        justify-content: center;
+      }
+
+      .hero-slider {
+        flex: none;
+        width: 100%;
+        max-width: 460px;
+        height: 280px;
+        margin: 0 auto;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-btn {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .section {
+        padding: 60px 24px;
+      }
+
+      .map-section {
+        padding: 60px 24px;
+      }
     }
-    .topbar-right { flex-wrap: wrap; gap: 6px; }
-    .topbar-divider { display: none; }
 
-    nav { padding: 10px 16px; }
-    .logo-area { gap: 10px; max-width: calc(100% - 56px); }
-    .logo-area img { height: 42px; }
-    .logo-text h1 { font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .logo-text p { display: none; }
+    /* ── MOBILE LARGE (768px) ── */
+    @media (max-width: 768px) {
+      .topbar {
+        font-size: 11px;
+        padding: 6px 14px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
 
-    .hero { padding: 40px 16px; gap: 24px; }
-    .hero-text h1 { font-size: 28px; }
-    .hero-badge { font-size: 11px; padding: 5px 12px; }
-    .hero-text p { font-size: 15px; }
-    .btn-primary, .btn-secondary { padding: 12px 24px; font-size: 14px; }
-    .hero-slider { height: 240px; }
+      .topbar-right {
+        flex-wrap: wrap;
+        gap: 6px;
+      }
 
-    .stats { gap: 20px; padding: 30px 16px; }
-    .stat-item h2 { font-size: 30px; }
-    .stat-item p { font-size: 12px; }
+      .topbar-divider {
+        display: none;
+      }
 
-    .section { padding: 50px 16px; }
-    .section-title h2 { font-size: 26px; }
-    .section-title p { font-size: 14px; }
+      nav {
+        padding: 10px 16px;
+      }
 
-    .courses-grid { grid-template-columns: 1fr; gap: 20px; }
-    .why-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
-    .testimonials-grid { grid-template-columns: 1fr; }
-    .cert-grid { gap: 12px; }
-    .cert-badge { min-width: 110px; padding: 12px 16px; font-size: 13px; }
+      .logo-area {
+        gap: 10px;
+        max-width: calc(100% - 56px);
+      }
 
-    .map-section { padding: 40px 16px; }
-    .map-container iframe { height: 260px; }
-    .map-info-card { width: 170px; padding: 10px 11px 8px; }
-    .map-info-card strong { font-size: 11px; }
-    .map-info-card span { font-size: 9.5px; }
+      .logo-area img {
+        height: 42px;
+      }
 
-    .contact-grid { grid-template-columns: 1fr; gap: 32px; }
-    .contact-info h3 { font-size: 20px; }
-    .contact-form { padding: 24px 20px; }
-    .contact-form h3 { font-size: 18px; }
+      .logo-text h1 {
+        font-size: 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
 
-    footer { padding: 20px 16px; font-size: 12px; }
+      .logo-text p {
+        display: none;
+      }
 
-    .whatsapp-btn { bottom: 16px; right: 16px; width: 52px; height: 52px; }
-    .whatsapp-btn svg { width: 28px; height: 28px; }
-    .whatsapp-tooltip { bottom: 76px; right: 16px; font-size: 12px; }
-  }
+      .hero {
+        padding: 40px 16px;
+        gap: 24px;
+      }
 
-  /* ── MOBILE SMALL (480px) ── */
-  @media (max-width: 480px) {
-    .topbar { font-size: 10px; padding: 5px 12px; }
-    .topbar-icon { font-size: 10px; }
+      .hero-text h1 {
+        font-size: 28px;
+      }
 
-    nav { padding: 8px 12px; }
-    .logo-area img { height: 36px; }
-    .logo-text h1 { font-size: 13px; }
+      .hero-badge {
+        font-size: 11px;
+        padding: 5px 12px;
+      }
 
-    .hero { padding: 32px 14px; }
-    .hero-text h1 { font-size: 24px; }
-    .hero-badge { font-size: 10px; padding: 4px 10px; }
-    .hero-text p { font-size: 14px; }
-    .hero-buttons { gap: 10px; }
-    .btn-primary, .btn-secondary { padding: 11px 20px; font-size: 13px; width: 100%; text-align: center; }
-    .hero-slider { height: 200px; border-radius: 12px; }
-    .typing-box { padding: 8px 14px; gap: 6px; }
-    .typing-text { font-size: 13px; min-width: 120px; }
-    .typing-label { font-size: 11px; }
+      .hero-text p {
+        font-size: 15px;
+      }
 
-    .stats { padding: 24px 14px; gap: 16px; }
-    .stat-item h2 { font-size: 26px; }
-    .stat-item p { font-size: 11px; }
+      .btn-primary,
+      .btn-secondary {
+        padding: 12px 24px;
+        font-size: 14px;
+      }
 
-    .section { padding: 40px 14px; }
-    .section-title h2 { font-size: 22px; }
-    .map-section { padding: 32px 14px; }
-    .map-container iframe { height: 220px; }
-    .map-info-card { position: static; width: 100%; border-radius: 0 0 16px 16px; box-shadow: none; border-top: 1px solid #eee; padding: 12px 16px; }
+      .hero-slider {
+        height: 240px;
+      }
 
-    .why-grid { grid-template-columns: 1fr; }
-    .course-card { padding: 22px 18px; }
-    .course-card h3 { font-size: 16px; }
-    .course-footer { flex-direction: column; align-items: flex-start; gap: 10px; }
-    .read-more { align-self: flex-end; }
+      .stats {
+        gap: 20px;
+        padding: 30px 16px;
+      }
 
-    .cert-grid { gap: 10px; }
-    .cert-badge { min-width: 100px; max-width: none; flex: 1 1 calc(50% - 10px); padding: 12px 10px; font-size: 12px; }
+      .stat-item h2 {
+        font-size: 30px;
+      }
 
-    .contact-form { padding: 20px 16px; border-radius: 12px; }
-    .form-group input, .form-group select, .form-group textarea { padding: 10px 14px; font-size: 14px; }
+      .stat-item p {
+        font-size: 12px;
+      }
 
-    footer { font-size: 11px; }
-  }
+      .section {
+        padding: 50px 16px;
+      }
 
-  /* ── EXTRA SMALL (360px) ── */
-  @media (max-width: 360px) {
-    .hero-text h1 { font-size: 21px; }
-    .hero-badge { font-size: 9px; }
-    .stat-item h2 { font-size: 22px; }
-    .logo-text h1 { font-size: 11px; }
-    .cert-badge { flex: 1 1 100%; max-width: none; }
-    .btn-primary, .btn-secondary { font-size: 12px; padding: 10px 16px; }
-    .section-title h2 { font-size: 20px; }
-  }
-</style>
+      .section-title h2 {
+        font-size: 26px;
+      }
+
+      .section-title p {
+        font-size: 14px;
+      }
+
+      .courses-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cert-grid {
+        gap: 12px;
+      }
+
+      .cert-badge {
+        min-width: 110px;
+        padding: 12px 16px;
+        font-size: 13px;
+      }
+
+      .map-section {
+        padding: 40px 16px;
+      }
+
+      .map-container iframe {
+        height: 260px;
+      }
+
+      .map-info-card {
+        width: 170px;
+        padding: 10px 11px 8px;
+      }
+
+      .map-info-card strong {
+        font-size: 11px;
+      }
+
+      .map-info-card span {
+        font-size: 9.5px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .contact-info h3 {
+        font-size: 20px;
+      }
+
+      .contact-form {
+        padding: 24px 20px;
+      }
+
+      .contact-form h3 {
+        font-size: 18px;
+      }
+
+      footer {
+        padding: 20px 16px;
+        font-size: 12px;
+      }
+
+      .whatsapp-btn {
+        bottom: 16px;
+        right: 16px;
+        width: 52px;
+        height: 52px;
+      }
+
+      .whatsapp-btn svg {
+        width: 28px;
+        height: 28px;
+      }
+
+      .whatsapp-tooltip {
+        bottom: 76px;
+        right: 16px;
+        font-size: 12px;
+      }
+    }
+
+    /* ── MOBILE SMALL (480px) ── */
+    @media (max-width: 480px) {
+      .topbar {
+        font-size: 10px;
+        padding: 5px 12px;
+      }
+
+      .topbar-icon {
+        font-size: 10px;
+      }
+
+      nav {
+        padding: 8px 12px;
+      }
+
+      .logo-area img {
+        height: 36px;
+      }
+
+      .logo-text h1 {
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 32px 14px;
+      }
+
+      .hero-text h1 {
+        font-size: 24px;
+      }
+
+      .hero-badge {
+        font-size: 10px;
+        padding: 4px 10px;
+      }
+
+      .hero-text p {
+        font-size: 14px;
+      }
+
+      .hero-buttons {
+        gap: 10px;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        padding: 11px 20px;
+        font-size: 13px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .hero-slider {
+        height: 200px;
+        border-radius: 12px;
+      }
+
+      .typing-box {
+        padding: 8px 14px;
+        gap: 6px;
+      }
+
+      .typing-text {
+        font-size: 13px;
+        min-width: 120px;
+      }
+
+      .typing-label {
+        font-size: 11px;
+      }
+
+      .stats {
+        padding: 24px 14px;
+        gap: 16px;
+      }
+
+      .stat-item h2 {
+        font-size: 26px;
+      }
+
+      .stat-item p {
+        font-size: 11px;
+      }
+
+      .section {
+        padding: 40px 14px;
+      }
+
+      .section-title h2 {
+        font-size: 22px;
+      }
+
+      .map-section {
+        padding: 32px 14px;
+      }
+
+      .map-container iframe {
+        height: 220px;
+      }
+
+      .map-info-card {
+        position: static;
+        width: 100%;
+        border-radius: 0 0 16px 16px;
+        box-shadow: none;
+        border-top: 1px solid #eee;
+        padding: 12px 16px;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .course-card {
+        padding: 22px 18px;
+      }
+
+      .course-card h3 {
+        font-size: 16px;
+      }
+
+      .course-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .read-more {
+        align-self: flex-end;
+      }
+
+      .cert-grid {
+        gap: 10px;
+      }
+
+      .cert-badge {
+        min-width: 100px;
+        max-width: none;
+        flex: 1 1 calc(50% - 10px);
+        padding: 12px 10px;
+        font-size: 12px;
+      }
+
+      .contact-form {
+        padding: 20px 16px;
+        border-radius: 12px;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        padding: 10px 14px;
+        font-size: 14px;
+      }
+
+      footer {
+        font-size: 11px;
+      }
+    }
+
+    /* ── EXTRA SMALL (360px) ── */
+    @media (max-width: 360px) {
+      .hero-text h1 {
+        font-size: 21px;
+      }
+
+      .hero-badge {
+        font-size: 9px;
+      }
+
+      .stat-item h2 {
+        font-size: 22px;
+      }
+
+      .logo-text h1 {
+        font-size: 11px;
+      }
+
+      .cert-badge {
+        flex: 1 1 100%;
+        max-width: none;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        font-size: 12px;
+        padding: 10px 16px;
+      }
+
+      .section-title h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- ── WHATSAPP BUTTON ── -->
-<a href="https://wa.me/919318490076" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-  </svg>
-</a>
-<div class="whatsapp-tooltip">Chat with us!</div>
-<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+  <!-- ── WHATSAPP BUTTON ── -->
+  <a href="https://wa.me/919318490076" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+  <div class="whatsapp-tooltip">Chat with us!</div>
+  <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
 
-<!-- ── TOPBAR ── -->
-<div class="topbar">
-  <a href="https://maps.app.goo.gl/hA3CdHYvUheG1F1B7?g_st=aw" target="_blank" class="topbar-icon">📍 A-603, Shahbad Dairy, Near Sec-16 Rohini, Delhi-110042</a>
-  <div class="topbar-right">
-    <a href="tel:+919318490076" class="topbar-icon">📞 9318490076</a>
-    <span class="topbar-divider">|</span>
-    <a href="mailto:cbeast613@gmail.com" class="topbar-icon">✉️ cbeast613@gmail.com</a>
-  </div>
-</div>
-
-<!-- ── NAVBAR ── -->
-<nav>
-  <div class="logo-area">
-    <img src="rcelogo.jpeg" alt="RCE Logo" onerror="this.style.display='none'">
-  </div>
-  <ul class="nav-links">
-    <li><a href="#courses">Courses</a></li>
-    <li><a href="#why">Why Us</a></li>
-    <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#testimonials">Reviews</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a href="#contact" class="nav-btn">Enroll Now</a>
-  <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
-</nav>
-
-<!-- ── MOBILE MENU ── -->
-<div class="mobile-menu" id="mobileMenu">
-  <button class="menu-close" onclick="closeMenu()">✕</button>
-  <div class="menu-logo">🏫 Rajdhani Computer Education</div>
-  <a href="#courses" onclick="closeMenu()">📚 Courses</a>
-  <a href="#why" onclick="closeMenu()">⭐ Why Choose Us</a>
-  <a href="#certifications" onclick="closeMenu()">🎓 Certifications</a>
-  <a href="#testimonials" onclick="closeMenu()">💬 Student Reviews</a>
-  <a href="#contact" onclick="closeMenu()">📞 Contact Us</a>
-  <a href="https://wa.me/919318490076" target="_blank">💬 WhatsApp Us</a>
-  <a href="#contact" class="mobile-enroll" onclick="closeMenu()">🚀 Enroll Now</a>
-</div>
-
-<!-- ── HERO ── -->
-<section class="hero" id="heroSection">
-  <div class="hero-text">
-    <div class="hero-badge">🏆 Regd. No. 63906 — Trusted Since 2015</div>
-    <h1 id="heroH1">
-      <span class="word">Build</span>
-      <span class="word">Your</span>
-      <span class="word highlight">Tech</span>
-      <span class="word highlight">Career</span>
-      <span class="word">With</span>
-      <span class="word">Expert</span>
-      <span class="word">Training</span>
-    </h1>
-    <p id="heroP">Learn Graphic Design, Web Development, Hardware Networking, Tally & more from industry experts in Delhi's most trusted computer institute.</p>
-    <div class="hero-buttons" id="heroBtns">
-      <a href="#courses" class="btn-primary">Explore Courses</a>
-      <a href="#contact" class="btn-secondary">Contact Us</a>
-    </div>
-    <div class="typing-box" id="typingBox">
-      <span class="typing-label">We Teach ▶</span>
-      <span class="typing-text"><span id="typingText"></span><span class="typing-cursor"></span></span>
+  <!-- ── TOPBAR ── -->
+  <div class="topbar">
+    <a href="https://maps.app.goo.gl/hA3CdHYvUheG1F1B7?g_st=aw" target="_blank" class="topbar-icon">📍 A-603, Shahbad
+      Dairy, Near Sec-16 Rohini, Delhi-110042</a>
+    <div class="topbar-right">
+      <a href="tel:+919318490076" class="topbar-icon">📞 9318490076</a>
+      <span class="topbar-divider">|</span>
+      <a href="mailto:cbeast613@gmail.com" class="topbar-icon">✉️ cbeast613@gmail.com</a>
     </div>
   </div>
-  <div class="hero-slider" id="heroSlider">
-    <div class="slide active" id="slide-0">
-      <img src="slide1.jpg" alt="Graphic Design Class" onerror="this.parentElement.innerHTML='<div class=\'slide-placeholder\'><div class=\'ph-icon\'>🎨</div><div class=\'ph-name\'>Graphic Design</div><div class=\'ph-text\'>slide1.jpg yahan rakho</div></div>'">
-      <div class="slide-label">Graphic Design Classes</div>
-    </div>
-    <div class="slide" id="slide-1">
-      <img src="slide2.jpg" alt="Web Designing Class" onerror="this.parentElement.innerHTML='<div class=\'slide-placeholder\'><div class=\'ph-icon\'>🌐</div><div class=\'ph-name\'>Web Designing</div><div class=\'ph-text\'>slide2.jpg yahan rakho</div></div>'">
-      <div class="slide-label">Web Designing Classes</div>
-    </div>
-    <div class="slide" id="slide-2">
-      <img src="slide3.jpg" alt="Hardware Networking Class" onerror="this.parentElement.innerHTML='<div class=\'slide-placeholder\'><div class=\'ph-icon\'>🔧</div><div class=\'ph-name\'>Hardware & Networking</div><div class=\'ph-text\'>slide3.jpg yahan rakho</div></div>'">
-      <div class="slide-label">Hardware & Networking</div>
-    </div>
-    <div class="slide" id="slide-3">
-      <img src="slide4.jpg" alt="Tally GST Class" onerror="this.parentElement.innerHTML='<div class=\'slide-placeholder\'><div class=\'ph-icon\'>📊</div><div class=\'ph-name\'>Tally with GST</div><div class=\'ph-text\'>slide4.jpg yahan rakho</div></div>'">
-      <div class="slide-label">Tally with GST Classes</div>
-    </div>
-    <div class="slider-dots">
-      <div class="slider-dot active" onclick="goToSlide(0)"></div>
-      <div class="slider-dot" onclick="goToSlide(1)"></div>
-      <div class="slider-dot" onclick="goToSlide(2)"></div>
-      <div class="slider-dot" onclick="goToSlide(3)"></div>
-    </div>
-  </div>
-</section>
 
-<!-- ── STATS ── -->
-<div class="stats" id="stats">
-  <div class="stat-item"><h2 id="stat1">0+</h2><p>Students Trained</p></div>
-  <div class="stat-item"><h2 id="stat2">0+</h2><p>Years Experience</p></div>
-  <div class="stat-item"><h2 id="stat3">0+</h2><p>Courses Offered</p></div>
-  <div class="stat-item"><h2 id="stat4">0</h2><p>Established</p></div>
-</div>
+  <!-- ── NAVBAR ── -->
+  <nav>
+    <div class="logo-area">
+      <img src="rcelogo.jpeg" alt="RCE Logo" onerror="this.style.display='none'">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-btn">Enroll Now</a>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
+  </nav>
 
-<!-- ── COURSES ── -->
-<section class="section" id="courses">
-  <div class="section-title">
-    <h2>Our Courses</h2>
-    <p>Professional courses designed for real-world careers</p>
-    <div class="line"></div>
+  <!-- ── MOBILE MENU ── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="menu-close" onclick="closeMenu()">✕</button>
+    <div class="menu-logo">🏫 Rajdhani Computer Education</div>
+    <a href="#courses" onclick="closeMenu()">📚 Courses</a>
+    <a href="#why" onclick="closeMenu()">⭐ Why Choose Us</a>
+    <a href="#certifications" onclick="closeMenu()">🎓 Certifications</a>
+    <a href="#testimonials" onclick="closeMenu()">💬 Student Reviews</a>
+    <a href="#contact" onclick="closeMenu()">📞 Contact Us</a>
+    <a href="https://wa.me/919318490076" target="_blank">💬 WhatsApp Us</a>
+    <a href="#contact" class="mobile-enroll" onclick="closeMenu()">🚀 Enroll Now</a>
   </div>
-  <div class="courses-grid">
-    <div class="course-card popular">
-      <div class="popular-badge">⭐ Most Popular</div>
-      <div class="course-icon">🎨</div>
-      <h3>Graphic Design</h3>
-      <p>Master Photoshop, CorelDRAW, Illustrator and create stunning visuals for print and digital media.</p>
-      <div class="course-footer">
-        <span class="course-duration">⏱ 6 Months</span>
-        <a href="courses/graphic-design.html" class="read-more">Read More →</a>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="heroSection">
+    <div class="hero-text">
+      <div class="hero-badge">🏆 Regd. No. 63906 — Trusted Since 2015</div>
+      <h1 id="heroH1">
+        <span class="word">Build</span>
+        <span class="word">Your</span>
+        <span class="word highlight">Tech</span>
+        <span class="word highlight">Career</span>
+        <span class="word">With</span>
+        <span class="word">Expert</span>
+        <span class="word">Training</span>
+      </h1>
+      <p id="heroP">Learn Graphic Design, Web Development, Hardware Networking, Tally & more from industry experts in
+        Delhi's most trusted computer institute.</p>
+      <div class="hero-buttons" id="heroBtns">
+        <a href="#courses" class="btn-primary">Explore Courses</a>
+        <a href="#contact" class="btn-secondary">Contact Us</a>
+      </div>
+      <div class="typing-box" id="typingBox">
+        <span class="typing-label">We Teach ▶</span>
+        <span class="typing-text"><span id="typingText"></span><span class="typing-cursor"></span></span>
       </div>
     </div>
-    <div class="course-card">
-      <div class="course-icon">🖥️</div>
-      <h3>Basic Computer</h3>
-      <p>Learn fundamentals of computers, MS Office, internet usage and essential digital skills.</p>
-      <div class="course-footer">
-        <span class="course-duration">⏱ 6 Months</span>
-        <a href="courses/basic-computer.html" class="read-more">Read More →</a>
+    <div class="hero-slider" id="heroSlider">
+      <div class="slide active" id="slide-0">
+        <img src="slide1.jpg" alt="Graphic Design Class"
+          onerror="this.parentElement.innerHTML='<div class=\'slide-placeholder\'><div class=\'ph-icon\'>🎨</div><div class=\'ph-name\'>Graphic Design</div><div class=\'ph-text\'>slide1.jpg yahan rakho</div></div>'">
+        <div class="slide-label">Graphic Design Classes</div>
+      </div>
+      <div class="slide" id="slide-1">
+        <img src="slide2.jpg" alt="Web Designing Class"
+          onerror="this.parentElement.innerHTML='<div class=\'slide-placeholder\'><div class=\'ph-icon\'>🌐</div><div class=\'ph-name\'>Web Designing</div><div class=\'ph-text\'>slide2.jpg yahan rakho</div></div>'">
+        <div class="slide-label">Web Designing Classes</div>
+      </div>
+      <div class="slide" id="slide-2">
+        <img src="slide3.jpg" alt="Hardware Networking Class"
+          onerror="this.parentElement.innerHTML='<div class=\'slide-placeholder\'><div class=\'ph-icon\'>🔧</div><div class=\'ph-name\'>Hardware & Networking</div><div class=\'ph-text\'>slide3.jpg yahan rakho</div></div>'">
+        <div class="slide-label">Hardware & Networking</div>
+      </div>
+      <div class="slide" id="slide-3">
+        <img src="slide4.jpg" alt="Tally GST Class"
+          onerror="this.parentElement.innerHTML='<div class=\'slide-placeholder\'><div class=\'ph-icon\'>📊</div><div class=\'ph-name\'>Tally with GST</div><div class=\'ph-text\'>slide4.jpg yahan rakho</div></div>'">
+        <div class="slide-label">Tally with GST Classes</div>
+      </div>
+      <div class="slider-dots">
+        <div class="slider-dot active" onclick="goToSlide(0)"></div>
+        <div class="slider-dot" onclick="goToSlide(1)"></div>
+        <div class="slider-dot" onclick="goToSlide(2)"></div>
+        <div class="slider-dot" onclick="goToSlide(3)"></div>
       </div>
     </div>
-    <div class="course-card">
-      <div class="course-icon">🌐</div>
-      <h3>Web Designing</h3>
-      <p>Build professional websites using HTML, CSS, JavaScript and modern web design tools.</p>
-      <div class="course-footer">
-        <span class="course-duration">⏱ 6 Months</span>
-        <a href="courses/web-designing.html" class="read-more">Read More →</a>
-      </div>
-    </div>
-    <div class="course-card">
-      <div class="course-icon">🔧</div>
-      <h3>Hardware & Networking</h3>
-      <p>Learn computer assembly, troubleshooting, LAN/WAN networking and hardware maintenance.</p>
-      <div class="course-footer">
-        <span class="course-duration">⏱ 6 Months</span>
-        <a href="courses/hardware-networking.html" class="read-more">Read More →</a>
-      </div>
-    </div>
-    <div class="course-card">
-      <div class="course-icon">📊</div>
-      <h3>Tally with GST</h3>
-      <p>Complete accounting software training with GST, payroll and financial reports.</p>
-      <div class="course-footer">
-        <span class="course-duration">⏱ 3 Months</span>
-        <a href="courses/tally-gst.html" class="read-more">Read More →</a>
-      </div>
-    </div>
-    <div class="course-card">
-      <div class="course-icon">🎓</div>
-      <h3>Advance Diploma</h3>
-      <p>Comprehensive advanced program covering multiple domains for a complete career-ready skill set.</p>
-      <div class="course-footer">
-        <span class="course-duration">⏱ 1 Year</span>
-        <a href="courses/advance-diploma.html" class="read-more">Read More →</a>
-      </div>
-    </div>
-    <div class="course-card">
-      <div class="course-icon">🖨️</div>
-      <h3>Desktop Publishing</h3>
-      <p>Create professional layouts for newspapers, magazines, brochures using PageMaker & InDesign.</p>
-      <div class="course-footer">
-        <span class="course-duration">⏱ 6 Months</span>
-        <a href="courses/desktop-publishing.html" class="read-more">Read More →</a>
-      </div>
-    </div>
-    <div class="course-card">
-      <div class="course-icon">🎬</div>
-      <h3>Multimedia & Animation</h3>
-      <p>Learn 2D/3D animation, video editing, visual effects and multimedia production tools.</p>
-      <div class="course-footer">
-        <span class="course-duration">⏱ 6 Months</span>
-        <a href="courses/multimedia-animation.html" class="read-more">Read More →</a>
-      </div>
-    </div>
-    <div class="course-card">
-      <div class="course-icon">📈</div>
-      <h3>MS Excel</h3>
-      <p>Master Microsoft Excel with formulas, pivot tables, charts, data analysis and advanced functions.</p>
-      <div class="course-footer">
-        <span class="course-duration">⏱ 3 Months</span>
-        <a href="courses/ms-excel.html" class="read-more">Read More →</a>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- ── WHY US ── -->
-<section class="section why-section" id="why">
-  <div class="section-title">
-    <h2>Why Choose Us?</h2>
-    <p>Delhi's most trusted computer training institute</p>
-    <div class="line"></div>
+  <!-- ── STATS ── -->
+  <div class="stats" id="stats">
+    <div class="stat-item">
+      <h2 id="stat1">0+</h2>
+      <p>Students Trained</p>
+    </div>
+    <div class="stat-item">
+      <h2 id="stat2">0+</h2>
+      <p>Years Experience</p>
+    </div>
+    <div class="stat-item">
+      <h2 id="stat3">0+</h2>
+      <p>Courses Offered</p>
+    </div>
+    <div class="stat-item">
+      <h2 id="stat4">0</h2>
+      <p>Established</p>
+    </div>
   </div>
-  <div class="why-grid">
-    <div class="why-card"><div class="why-icon">👨‍🏫</div><h3>Expert Trainers</h3><p>Learn from experienced professionals with real industry knowledge.</p></div>
-    <div class="why-card"><div class="why-icon">💻</div><h3>Practical Training</h3><p>100% hands-on training on modern computers and latest software.</p></div>
-    <div class="why-card"><div class="why-icon">📜</div><h3>Certified Courses</h3><p>Get government recognized certificates accepted by top companies.</p></div>
-    <div class="why-card"><div class="why-icon">💼</div><h3>Placement Help</h3><p>We help students find jobs through our strong industry network.</p></div>
-    <div class="why-card"><div class="why-icon">💰</div><h3>Affordable Fees</h3><p>Quality education at the most affordable prices in Delhi.</p></div>
-    <div class="why-card"><div class="why-icon">📍</div><h3>Prime Location</h3><p>Conveniently located near Sector-16 Rohini, easily accessible.</p></div>
-  </div>
-</section>
 
-<!-- ── CERTIFICATIONS ── -->
-<section class="section" id="certifications">
-  <div class="section-title">
-    <h2>Our Certifications</h2>
-    <p>Industry recognized certificates for your career growth</p>
-    <div class="line"></div>
-  </div>
-  <div class="cert-grid">
-    <div class="cert-badge"><span>🏛️</span>Govt. Registered</div>
-    <div class="cert-badge"><span>🎓</span>NIELIT Certified</div>
-    <div class="cert-badge"><span>💼</span>Industry Accepted</div>
-    <div class="cert-badge"><span>🌐</span>Web Design Cert</div>
-    <div class="cert-badge"><span>🔧</span>Hardware Cert</div>
-    <div class="cert-badge"><span>📊</span>Tally Certified</div>
-  </div>
-</section>
-
-<!-- ── TESTIMONIALS ── -->
-<section class="section testimonials-section" id="testimonials">
-  <div class="section-title">
-    <h2>What Our Students Say</h2>
-    <p>Real reviews from students of Rajdhani Computer Education</p>
-    <div class="line"></div>
-  </div>
-  <div class="testimonials-grid">
-    <div class="testi-card">
-      <div class="testi-quote">"</div>
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Graphic Design course ne meri zindagi badal di. Photoshop aur CorelDRAW seekhne ke baad ab main freelancing kar raha hoon. Teachers bahut helpful hain aur practical training best hai.</p>
-      <div class="testi-author"><div class="testi-avatar">RS</div><div><div class="testi-name">Rahul Sharma</div><div class="testi-course">Graphic Design — 2024</div></div></div>
+  <!-- ── COURSES ── -->
+  <section class="section" id="courses">
+    <div class="section-title">
+      <h2>Our Courses</h2>
+      <p>Professional courses designed for real-world careers</p>
+      <div class="line"></div>
     </div>
-    <div class="testi-card">
-      <div class="testi-quote">"</div>
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Tally with GST course karke mujhe ek accounting firm mein job mil gayi. Fees bahut affordable hai aur certificate bhi recognized hai. Bahut achha institute hai Rohini mein.</p>
-      <div class="testi-author"><div class="testi-avatar">PG</div><div><div class="testi-name">Priya Gupta</div><div class="testi-course">Tally with GST — 2024</div></div></div>
-    </div>
-    <div class="testi-card">
-      <div class="testi-quote">"</div>
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Hardware & Networking course ke baad maine apna khud ka computer repair shop khola. Yahan jo practical knowledge mili wo kisi aur jagah nahi milti. Sir bahut achhe se samjhate hain.</p>
-      <div class="testi-author"><div class="testi-avatar">AK</div><div><div class="testi-name">Amit Kumar</div><div class="testi-course">Hardware & Networking — 2023</div></div></div>
-    </div>
-    <div class="testi-card">
-      <div class="testi-quote">"</div>
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Basic Computer course se maine MS Office seekha aur ab main ek office mein data entry ka kaam kar rahi hoon. Institute ka mahaul bahut achha hai aur sab log helpful hain.</p>
-      <div class="testi-author"><div class="testi-avatar">SK</div><div><div class="testi-name">Sunita Kaur</div><div class="testi-course">Basic Computer — 2025</div></div></div>
-    </div>
-    <div class="testi-card">
-      <div class="testi-quote">"</div>
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Web Designing seekhke maine apni khud ki website banayi. HTML, CSS sab kuch itna clearly samjhaya gaya ki ab main clients ke liye bhi websites bana sakta hoon.</p>
-      <div class="testi-author"><div class="testi-avatar">MV</div><div><div class="testi-name">Mohit Verma</div><div class="testi-course">Web Designing — 2025</div></div></div>
-    </div>
-    <div class="testi-card">
-      <div class="testi-quote">"</div>
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Advance Diploma complete kiya aur placements mein help bhi mili. Ek saal mein itni saari skills seekhna possible hua sirf is institute ki wajah se. Highly recommend!</p>
-      <div class="testi-author"><div class="testi-avatar">NJ</div><div><div class="testi-name">Neha Joshi</div><div class="testi-course">Advance Diploma — 2023</div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ── MAP ── -->
-<section class="map-section" id="map">
-  <div class="section-title">
-    <h2>Find Us Here</h2>
-    <p>Visit us at our Rohini Delhi location</p>
-    <div class="line"></div>
-  </div>
-  <div class="map-container">
-    <div class="map-wrapper">
-      <div class="map-info-card" id="mapInfoCard">
-        <strong>📍 Rajdhani Computer Education</strong>
-        <span>A-603, Bawana Rd, Shahbad Dairy, Rohini, Delhi-110042</span>
-        <div class="map-info-btns">
-          <a class="btn-open" href="https://maps.app.goo.gl/hA3CdHYvUheG1F1B7?g_st=aw" target="_blank">📍 Open</a>
-          <a class="btn-dir" href="https://www.google.com/maps/dir/?api=1&destination=28.745999,77.096889" target="_blank">➡ Directions</a>
+    <div class="courses-grid">
+      <div class="course-card popular">
+        <div class="popular-badge">⭐ Most Popular</div>
+        <div class="course-icon">🎨</div>
+        <h3>Graphic Design</h3>
+        <p>Master Photoshop, CorelDRAW, Illustrator and create stunning visuals for print and digital media.</p>
+        <div class="course-footer">
+          <span class="course-duration">⏱ 6 Months</span>
+          <a href="courses/graphic-design.html" class="read-more">Read More →</a>
         </div>
       </div>
-      <iframe src="https://maps.google.com/maps?q=28.745999,77.096889&z=16&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Rajdhani Computer Education Location"></iframe>
+      <div class="course-card">
+        <div class="course-icon">🖥️</div>
+        <h3>Basic Computer</h3>
+        <p>Learn fundamentals of computers, MS Office, internet usage and essential digital skills.</p>
+        <div class="course-footer">
+          <span class="course-duration">⏱ 6 Months</span>
+          <a href="courses/basic-computer.html" class="read-more">Read More →</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">🌐</div>
+        <h3>Web Designing</h3>
+        <p>Build professional websites using HTML, CSS, JavaScript and modern web design tools.</p>
+        <div class="course-footer">
+          <span class="course-duration">⏱ 6 Months</span>
+          <a href="courses/web-designing.html" class="read-more">Read More →</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">🔧</div>
+        <h3>Hardware & Networking</h3>
+        <p>Learn computer assembly, troubleshooting, LAN/WAN networking and hardware maintenance.</p>
+        <div class="course-footer">
+          <span class="course-duration">⏱ 6 Months</span>
+          <a href="courses/hardware-networking.html" class="read-more">Read More →</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">📊</div>
+        <h3>Tally with GST</h3>
+        <p>Complete accounting software training with GST, payroll and financial reports.</p>
+        <div class="course-footer">
+          <span class="course-duration">⏱ 3 Months</span>
+          <a href="courses/tally-gst.html" class="read-more">Read More →</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">🎓</div>
+        <h3>Advance Diploma</h3>
+        <p>Comprehensive advanced program covering multiple domains for a complete career-ready skill set.</p>
+        <div class="course-footer">
+          <span class="course-duration">⏱ 1 Year</span>
+          <a href="courses/advance-diploma.html" class="read-more">Read More →</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">🖨️</div>
+        <h3>Desktop Publishing</h3>
+        <p>Create professional layouts for newspapers, magazines, brochures using PageMaker & InDesign.</p>
+        <div class="course-footer">
+          <span class="course-duration">⏱ 6 Months</span>
+          <a href="courses/desktop-publishing.html" class="read-more">Read More →</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">🎬</div>
+        <h3>Multimedia & Animation</h3>
+        <p>Learn 2D/3D animation, video editing, visual effects and multimedia production tools.</p>
+        <div class="course-footer">
+          <span class="course-duration">⏱ 6 Months</span>
+          <a href="courses/multimedia-animation.html" class="read-more">Read More →</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">📈</div>
+        <h3>MS Excel</h3>
+        <p>Master Microsoft Excel with formulas, pivot tables, charts, data analysis and advanced functions.</p>
+        <div class="course-footer">
+          <span class="course-duration">⏱ 3 Months</span>
+          <a href="courses/ms-excel.html" class="read-more">Read More →</a>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ── CONTACT ── -->
-<section class="section contact-section" id="contact">
-  <div class="section-title">
-    <h2>Get In Touch</h2>
-    <p>Enroll today and start your tech career journey</p>
-    <div class="line"></div>
-  </div>
-  <div class="contact-grid">
-    <div class="contact-info">
-      <h3>Contact Information</h3>
-      <a href="https://maps.app.goo.gl/hA3CdHYvUheG1F1B7?g_st=aw" target="_blank" class="contact-item">
-        <div class="contact-item-icon">📍</div>
-        <div class="contact-item-text"><p>Address</p><strong>A-603, A-Block Shahbad Dairy, Near Sec-16 Rohini, Delhi-110042</strong></div>
-      </a>
-      <a href="tel:+910112782157" class="contact-item">
-        <div class="contact-item-icon">📞</div>
-        <div class="contact-item-text"><p>Phone</p><strong>(011) 278-22157</strong></div>
-      </a>
-      <a href="tel:+919318490076" class="contact-item">
-        <div class="contact-item-icon">📱</div>
-        <div class="contact-item-text"><p>Mobile</p><strong>9318490076 / 8076485182</strong></div>
-      </a>
-      <a href="mailto:cbeast613@gmail.com" class="contact-item">
-        <div class="contact-item-icon">✉️</div>
-        <div class="contact-item-text"><p>Email</p><strong>cbeast613@gmail.com</strong></div>
-      </a>
-      <a href="https://www.rcews.com" target="_blank" class="contact-item">
-        <div class="contact-item-icon">🌐</div>
-        <div class="contact-item-text"><p>Website</p><strong>www.rcews.com</strong></div>
-      </a>
+  <!-- ── WHY US ── -->
+  <section class="section why-section" id="why">
+    <div class="section-title">
+      <h2>Why Choose Us?</h2>
+      <p>Delhi's most trusted computer training institute</p>
+      <div class="line"></div>
     </div>
-    <div class="contact-form">
-      <h3>Enquire Now</h3>
-      <form id="enquiry-form">
-        <div class="form-group">
-          <input type="hidden" name="access_key" value="bc6f4876-a716-4bd1-92fe-d34cce784f1a">
-        </div>
-        <div class="form-group">
-          <input type="text" name="name" placeholder="Your Full Name *" required>
-        </div>
-        <div class="form-group">
-          <input type="tel" name="mobile" placeholder="Mobile Number *" pattern="[6-9][0-9]{9}" maxlength="10" inputmode="numeric" title="Please enter a valid 10-digit Indian mobile number" required>
-          <span class="form-hint">10 digit number daalo — 6, 7, 8 ya 9 se shuru hona chahiye</span>
-        </div>
-        <div class="form-group">
-          <input type="email" name="email" placeholder="Email Address">
-        </div>
-        <div class="form-group">
-          <select name="course" id="courseSelect">
-            <option value="">Select Course *</option>
-            <option>Basic Computer</option>
-            <option>Graphic Design</option>
-            <option>Web Designing</option>
-            <option>Hardware &amp; Networking</option>
-            <option>Tally with GST</option>
-            <option>Advance Diploma</option>
-            <option>Desktop Publishing</option>
-            <option>Multimedia &amp; Animation</option>
-            <option>MS Excel</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <textarea name="message" placeholder="Your Message (Optional)"></textarea>
-        </div>
-        <button type="button" class="form-submit" id="submitBtn" onclick="window.submitForm()">Submit Enquiry 🚀</button>
-        <div class="success-msg" id="success-msg">✅ Thank you! We will contact you soon!</div>
-        <div class="error-msg" id="error-msg">❌ Something went wrong. Please call us directly.</div>
-      </form>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">👨‍🏫</div>
+        <h3>Expert Trainers</h3>
+        <p>Learn from experienced professionals with real industry knowledge.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💻</div>
+        <h3>Practical Training</h3>
+        <p>100% hands-on training on modern computers and latest software.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📜</div>
+        <h3>Certified Courses</h3>
+        <p>Get government recognized certificates accepted by top companies.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💼</div>
+        <h3>Placement Help</h3>
+        <p>We help students find jobs through our strong industry network.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💰</div>
+        <h3>Affordable Fees</h3>
+        <p>Quality education at the most affordable prices in Delhi.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📍</div>
+        <h3>Prime Location</h3>
+        <p>Conveniently located near Sector-16 Rohini, easily accessible.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ── FOOTER ── -->
-<footer>
-  <p>© 2026 <span>Rajdhani Computer Education</span> | A-603, Shahbad Dairy, Delhi-110042 | Regd. No. 63906</p>
-  <p style="margin-top:6px;">Built with ❤️ | www.rcews.com</p>
-</footer>
+  <!-- ── CERTIFICATIONS ── -->
+  <section class="section" id="certifications">
+    <div class="section-title">
+      <h2>Our Certifications</h2>
+      <p>Industry recognized certificates for your career growth</p>
+      <div class="line"></div>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-badge"><span>🏛️</span>Govt. Registered</div>
+      <div class="cert-badge"><span>🎓</span>NIELIT Certified</div>
+      <div class="cert-badge"><span>💼</span>Industry Accepted</div>
+      <div class="cert-badge"><span>🌐</span>Web Design Cert</div>
+      <div class="cert-badge"><span>🔧</span>Hardware Cert</div>
+      <div class="cert-badge"><span>📊</span>Tally Certified</div>
+    </div>
+  </section>
 
-<script type="module">
-// ── CHATBOT CONFIG ──
-// The API key is now handled safely by the backend (/api/chat.js)
+  <!-- ── TESTIMONIALS ── -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="section-title">
+      <h2>What Our Students Say</h2>
+      <p>Real reviews from students of Rajdhani Computer Education</p>
+      <div class="line"></div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Graphic Design course ne meri zindagi badal di. Photoshop aur CorelDRAW seekhne ke baad ab
+          main freelancing kar raha hoon. Teachers bahut helpful hain aur practical training best hai.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">RS</div>
+          <div>
+            <div class="testi-name">Rahul Sharma</div>
+            <div class="testi-course">Graphic Design — 2024</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Tally with GST course karke mujhe ek accounting firm mein job mil gayi. Fees bahut
+          affordable hai aur certificate bhi recognized hai. Bahut achha institute hai Rohini mein.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">PG</div>
+          <div>
+            <div class="testi-name">Priya Gupta</div>
+            <div class="testi-course">Tally with GST — 2024</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Hardware & Networking course ke baad maine apna khud ka computer repair shop khola. Yahan
+          jo practical knowledge mili wo kisi aur jagah nahi milti. Sir bahut achhe se samjhate hain.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">AK</div>
+          <div>
+            <div class="testi-name">Amit Kumar</div>
+            <div class="testi-course">Hardware & Networking — 2023</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Basic Computer course se maine MS Office seekha aur ab main ek office mein data entry ka
+          kaam kar rahi hoon. Institute ka mahaul bahut achha hai aur sab log helpful hain.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">SK</div>
+          <div>
+            <div class="testi-name">Sunita Kaur</div>
+            <div class="testi-course">Basic Computer — 2025</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Web Designing seekhke maine apni khud ki website banayi. HTML, CSS sab kuch itna clearly
+          samjhaya gaya ki ab main clients ke liye bhi websites bana sakta hoon.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">MV</div>
+          <div>
+            <div class="testi-name">Mohit Verma</div>
+            <div class="testi-course">Web Designing — 2025</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Advance Diploma complete kiya aur placements mein help bhi mili. Ek saal mein itni saari
+          skills seekhna possible hua sirf is institute ki wajah se. Highly recommend!</p>
+        <div class="testi-author">
+          <div class="testi-avatar">NJ</div>
+          <div>
+            <div class="testi-name">Neha Joshi</div>
+            <div class="testi-course">Advance Diploma — 2023</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-// ── MOBILE MENU ──
-let menuOpen = false;
-window.toggleMenu = function() {
-  menuOpen = !menuOpen;
-  document.getElementById('mobileMenu').classList.toggle('open', menuOpen);
-  document.getElementById('menuOverlay').classList.toggle('open', menuOpen);
-  document.getElementById('hamburgerBtn').textContent = menuOpen ? '✕' : '☰';
-  const chatBtn = document.getElementById('rce-chat-btn');
-  if (chatBtn) chatBtn.style.zIndex = menuOpen ? '9990' : '9996';
-}
-window.closeMenu = function() {
-  menuOpen = false;
-  document.getElementById('mobileMenu').classList.remove('open');
-  document.getElementById('menuOverlay').classList.remove('open');
-  document.getElementById('hamburgerBtn').textContent = '☰';
-  const chatBtn = document.getElementById('rce-chat-btn');
-  if (chatBtn) chatBtn.style.zIndex = '9996';
-}
+  <!-- ── MAP ── -->
+  <section class="map-section" id="map">
+    <div class="section-title">
+      <h2>Find Us Here</h2>
+      <p>Visit us at our Rohini Delhi location</p>
+      <div class="line"></div>
+    </div>
+    <div class="map-container">
+      <div class="map-wrapper">
+        <div class="map-info-card" id="mapInfoCard">
+          <strong>📍 Rajdhani Computer Education</strong>
+          <span>A-603, Bawana Rd, Shahbad Dairy, Rohini, Delhi-110042</span>
+          <div class="map-info-btns">
+            <a class="btn-open" href="https://maps.app.goo.gl/hA3CdHYvUheG1F1B7?g_st=aw" target="_blank">📍 Open</a>
+            <a class="btn-dir" href="https://www.google.com/maps/dir/?api=1&destination=28.745999,77.096889"
+              target="_blank">➡ Directions</a>
+          </div>
+        </div>
+        <iframe src="https://maps.google.com/maps?q=28.745999,77.096889&z=16&output=embed" allowfullscreen=""
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Rajdhani Computer Education Location"></iframe>
+      </div>
+    </div>
+  </section>
 
-// ── RESPONSIVE MAP INFO CARD ──
-function handleMapInfoCard() {
-  const card = document.getElementById('mapInfoCard');
-  if (!card) return;
-  if (window.innerWidth <= 480) {
-    card.style.position = 'static'; card.style.width = '100%';
-    card.style.borderRadius = '0 0 16px 16px'; card.style.boxShadow = 'none';
-    card.style.borderTop = '1px solid #eee'; card.style.padding = '12px 16px';
-  } else {
-    card.style.position = 'absolute'; card.style.width = '200px';
-    card.style.borderRadius = '10px'; card.style.boxShadow = '0 2px 12px rgba(0,0,0,0.28)';
-    card.style.borderTop = '';
-  }
-}
-window.addEventListener('resize', handleMapInfoCard);
-handleMapInfoCard();
+  <!-- ── CONTACT ── -->
+  <section class="section contact-section" id="contact">
+    <div class="section-title">
+      <h2>Get In Touch</h2>
+      <p>Enroll today and start your tech career journey</p>
+      <div class="line"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <a href="https://maps.app.goo.gl/hA3CdHYvUheG1F1B7?g_st=aw" target="_blank" class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div class="contact-item-text">
+            <p>Address</p><strong>A-603, A-Block Shahbad Dairy, Near Sec-16 Rohini, Delhi-110042</strong>
+          </div>
+        </a>
+        <a href="tel:+910112782157" class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <div class="contact-item-text">
+            <p>Phone</p><strong>(011) 278-22157</strong>
+          </div>
+        </a>
+        <a href="tel:+919318490076" class="contact-item">
+          <div class="contact-item-icon">📱</div>
+          <div class="contact-item-text">
+            <p>Mobile</p><strong>9318490076 / 8076485182</strong>
+          </div>
+        </a>
+        <a href="mailto:cbeast613@gmail.com" class="contact-item">
+          <div class="contact-item-icon">✉️</div>
+          <div class="contact-item-text">
+            <p>Email</p><strong>cbeast613@gmail.com</strong>
+          </div>
+        </a>
+        <a href="https://www.rcews.com" target="_blank" class="contact-item">
+          <div class="contact-item-icon">🌐</div>
+          <div class="contact-item-text">
+            <p>Website</p><strong>www.rcews.com</strong>
+          </div>
+        </a>
+      </div>
+      <div class="contact-form">
+        <h3>Enquire Now</h3>
+        <form id="enquiry-form">
+          <div class="form-group">
+            <input type="hidden" name="access_key" value="bc6f4876-a716-4bd1-92fe-d34cce784f1a">
+          </div>
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Full Name *" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" name="mobile" placeholder="Mobile Number *" pattern="[6-9][0-9]{9}" maxlength="10"
+              inputmode="numeric" title="Please enter a valid 10-digit Indian mobile number" required>
+            <span class="form-hint">10 digit number daalo — 6, 7, 8 ya 9 se shuru hona chahiye</span>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email Address">
+          </div>
+          <div class="form-group">
+            <select name="course" id="courseSelect">
+              <option value="">Select Course *</option>
+              <option>Basic Computer</option>
+              <option>Graphic Design</option>
+              <option>Web Designing</option>
+              <option>Hardware &amp; Networking</option>
+              <option>Tally with GST</option>
+              <option>Advance Diploma</option>
+              <option>Desktop Publishing</option>
+              <option>Multimedia &amp; Animation</option>
+              <option>MS Excel</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Your Message (Optional)"></textarea>
+          </div>
+          <button type="button" class="form-submit" id="submitBtn" onclick="window.submitForm()">Submit Enquiry
+            🚀</button>
+          <div class="success-msg" id="success-msg">✅ Thank you! We will contact you soon!</div>
+          <div class="error-msg" id="error-msg">❌ Something went wrong. Please call us directly.</div>
+        </form>
+      </div>
+    </div>
+  </section>
 
-// ── IMAGE SLIDER ──
-let currentSlide = 0;
-const totalSlides = 4;
-const slides = document.querySelectorAll('.slide');
-const dots   = document.querySelectorAll('.slider-dot');
-window.goToSlide = function(n) {
-  if (!slides.length) return;
-  slides[currentSlide].classList.remove('active');
-  dots[currentSlide].classList.remove('active');
-  currentSlide = (n + totalSlides) % totalSlides;
-  slides[currentSlide].classList.add('active');
-  dots[currentSlide].classList.add('active');
-}
-if (slides.length > 0) { setInterval(() => { window.goToSlide(currentSlide + 1); }, 3000); }
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>© 2026 <span>Rajdhani Computer Education</span> | A-603, Shahbad Dairy, Delhi-110042 | Regd. No. 63906</p>
+    <p style="margin-top:6px;">Built with ❤️ | www.rcews.com</p>
+  </footer>
 
-// Touch swipe support for slider
-(function() {
-  const slider = document.getElementById('heroSlider');
-  if (!slider) return;
-  let startX = 0;
-  slider.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
-  slider.addEventListener('touchend', e => {
-    const diff = startX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) window.goToSlide(currentSlide + (diff > 0 ? 1 : -1));
-  }, { passive: true });
-})();
+  <script type="module">
+    // ── CHATBOT CONFIG ──
+    // The API key is now handled safely by the backend (/api/chat.js)
 
-// ── TYPING ANIMATION ──
-const typingWords = ['Graphic Design','Web Designing','Hardware & Networking','Tally with GST','Multimedia','MS Excel','Basic Computer','Advance Diploma','Desktop Publishing'];
-let tIdx = 0, charIdx = 0, deleting = false;
-const typingEl = document.getElementById('typingText');
-function typeLoop() {
-  if (!typingEl) return;
-  const word = typingWords[tIdx];
-  if (!deleting) {
-    typingEl.textContent = word.substring(0, charIdx + 1); charIdx++;
-    if (charIdx === word.length) { deleting = true; setTimeout(typeLoop, 1400); return; }
-  } else {
-    typingEl.textContent = word.substring(0, charIdx - 1); charIdx--;
-    if (charIdx === 0) { deleting = false; tIdx = (tIdx + 1) % typingWords.length; }
-  }
-  setTimeout(typeLoop, deleting ? 55 : 85);
-}
-typeLoop();
-
-// ── HERO WORD ANIMATION ──
-const words = document.querySelectorAll('#heroH1 .word');
-const heroP = document.getElementById('heroP');
-const heroBtns = document.getElementById('heroBtns');
-const typingBox = document.getElementById('typingBox');
-const heroSection = document.getElementById('heroSection');
-function resetHero() {
-  words.forEach(w => w.classList.remove('visible'));
-  if (heroP) { heroP.classList.remove('animate'); heroP.style.opacity = '0'; }
-  if (heroBtns) { heroBtns.classList.remove('animate'); heroBtns.style.opacity = '0'; }
-  if (typingBox) { typingBox.classList.remove('animate'); typingBox.style.opacity = '0'; }
-}
-function triggerHero() {
-  resetHero();
-  if (heroSection) void heroSection.offsetWidth;
-  words.forEach((w, i) => setTimeout(() => w.classList.add('visible'), i * 100));
-  setTimeout(() => { if (heroP) heroP.classList.add('animate'); }, words.length * 100 + 100);
-  setTimeout(() => { if (heroBtns) heroBtns.classList.add('animate'); }, words.length * 100 + 250);
-  setTimeout(() => { if (typingBox) typingBox.classList.add('animate'); }, words.length * 100 + 450);
-}
-if (heroSection) {
-  new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) triggerHero(); });
-  }, { threshold: 0.3 }).observe(heroSection);
-}
-
-// ── STATS COUNTER ──
-function animateCount(id, target, suffix, noComma) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  const steps = 60, inc = target / steps;
-  let cur = 0, step = 0;
-  el.textContent = '0' + suffix;
-  const t = setInterval(() => {
-    step++; cur += inc;
-    if (step >= steps) { cur = target; clearInterval(t); }
-    el.textContent = (noComma ? Math.floor(cur) : Math.floor(cur).toLocaleString('en-IN')) + suffix;
-  }, 2000 / steps);
-}
-let statsAnimated = false;
-const statsEl = document.getElementById('stats');
-if (statsEl) {
-  new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting && !statsAnimated) {
-        statsAnimated = true;
-        animateCount('stat1', 5000, '+', false);
-        animateCount('stat2', 10, '+', true);
-        animateCount('stat3', 9, '+', true);
-        animateCount('stat4', 2015, '', true);
-      }
-    });
-  }, { threshold: 0.3 }).observe(statsEl);
-}
-
-// ── FORM SUBMIT ──
-window.submitForm = async function() {
-  const form = document.getElementById('enquiry-form');
-  const sel  = document.getElementById('courseSelect');
-  const succ = document.getElementById('success-msg');
-  const err  = document.getElementById('error-msg');
-  const btn  = document.getElementById('submitBtn');
-  if (!form) return;
-  succ.style.display = 'none';
-  err.style.display  = 'none';
-  if (!form.querySelector('[name="name"]').value.trim()) {
-    form.querySelector('[name="name"]').focus(); return;
-  }
-  if (!/^[6-9][0-9]{9}$/.test(form.querySelector('[name="mobile"]').value.trim())) {
-    form.querySelector('[name="mobile"]').focus(); return;
-  }
-  if (!sel || sel.value === '') {
-    if (sel) sel.style.borderColor = '#e53935';
-    alert('Kripya ek course select karein!'); return;
-  }
-  btn.disabled = true;
-  btn.textContent = 'Bhej raha hai... ⏳';
-  try {
-    const res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST', body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    });
-    if (res.ok) {
-      form.reset();
-      if (sel) sel.style.borderColor = '#e0e0e0';
-      succ.style.display = 'block';
-      setTimeout(() => { succ.style.display = 'none'; }, 5000);
-    } else {
-      err.style.display = 'block';
-      setTimeout(() => { err.style.display = 'none'; }, 5000);
+    // ── MOBILE MENU ──
+    let menuOpen = false;
+    window.toggleMenu = function () {
+      menuOpen = !menuOpen;
+      document.getElementById('mobileMenu').classList.toggle('open', menuOpen);
+      document.getElementById('menuOverlay').classList.toggle('open', menuOpen);
+      document.getElementById('hamburgerBtn').textContent = menuOpen ? '✕' : '☰';
+      const chatBtn = document.getElementById('rce-chat-btn');
+      if (chatBtn) chatBtn.style.zIndex = menuOpen ? '9990' : '9996';
     }
-  } catch {
-    err.style.display = 'block';
-    setTimeout(() => { err.style.display = 'none'; }, 5000);
-  } finally {
-    btn.disabled = false;
-    btn.textContent = 'Submit Enquiry 🚀';
-  }
-};
+    window.closeMenu = function () {
+      menuOpen = false;
+      document.getElementById('mobileMenu').classList.remove('open');
+      document.getElementById('menuOverlay').classList.remove('open');
+      document.getElementById('hamburgerBtn').textContent = '☰';
+      const chatBtn = document.getElementById('rce-chat-btn');
+      if (chatBtn) chatBtn.style.zIndex = '9996';
+    }
 
-// ── CHATBOT ──
-async function getResponse(msg) {
-  try {
-    const response = await fetch('/api/chat', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: msg })
-    });
-    const data = await response.json();
-    return data.response || data.error || "Maaf kijiye, abhi system mein kuch dikkat hai.";
-  } catch (error) {
-    console.error("API Error:", error);
-    return "Maaf kijiye, connectivity mein dikkat hai. Kripya humein call karein: 9318490076";
-  }
-}
+    // ── RESPONSIVE MAP INFO CARD ──
+    function handleMapInfoCard() {
+      const card = document.getElementById('mapInfoCard');
+      if (!card) return;
+      if (window.innerWidth <= 480) {
+        card.style.position = 'static'; card.style.width = '100%';
+        card.style.borderRadius = '0 0 16px 16px'; card.style.boxShadow = 'none';
+        card.style.borderTop = '1px solid #eee'; card.style.padding = '12px 16px';
+      } else {
+        card.style.position = 'absolute'; card.style.width = '200px';
+        card.style.borderRadius = '10px'; card.style.boxShadow = '0 2px 12px rgba(0,0,0,0.28)';
+        card.style.borderTop = '';
+      }
+    }
+    window.addEventListener('resize', handleMapInfoCard);
+    handleMapInfoCard();
 
-// ── CHATBOT UI ──
-(function () {
-  const style = document.createElement("style");
-  style.textContent = `
+    // ── IMAGE SLIDER ──
+    let currentSlide = 0;
+    const totalSlides = 4;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.slider-dot');
+    window.goToSlide = function (n) {
+      if (!slides.length) return;
+      slides[currentSlide].classList.remove('active');
+      dots[currentSlide].classList.remove('active');
+      currentSlide = (n + totalSlides) % totalSlides;
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+    }
+    if (slides.length > 0) { setInterval(() => { window.goToSlide(currentSlide + 1); }, 3000); }
+
+    // Touch swipe support for slider
+    (function () {
+      const slider = document.getElementById('heroSlider');
+      if (!slider) return;
+      let startX = 0;
+      slider.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+      slider.addEventListener('touchend', e => {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) window.goToSlide(currentSlide + (diff > 0 ? 1 : -1));
+      }, { passive: true });
+    })();
+
+    // ── TYPING ANIMATION ──
+    const typingWords = ['Graphic Design', 'Web Designing', 'Hardware & Networking', 'Tally with GST', 'Multimedia', 'MS Excel', 'Basic Computer', 'Advance Diploma', 'Desktop Publishing'];
+    let tIdx = 0, charIdx = 0, deleting = false;
+    const typingEl = document.getElementById('typingText');
+    function typeLoop() {
+      if (!typingEl) return;
+      const word = typingWords[tIdx];
+      if (!deleting) {
+        typingEl.textContent = word.substring(0, charIdx + 1); charIdx++;
+        if (charIdx === word.length) { deleting = true; setTimeout(typeLoop, 1400); return; }
+      } else {
+        typingEl.textContent = word.substring(0, charIdx - 1); charIdx--;
+        if (charIdx === 0) { deleting = false; tIdx = (tIdx + 1) % typingWords.length; }
+      }
+      setTimeout(typeLoop, deleting ? 55 : 85);
+    }
+    typeLoop();
+
+    // ── HERO WORD ANIMATION ──
+    const words = document.querySelectorAll('#heroH1 .word');
+    const heroP = document.getElementById('heroP');
+    const heroBtns = document.getElementById('heroBtns');
+    const typingBox = document.getElementById('typingBox');
+    const heroSection = document.getElementById('heroSection');
+    function resetHero() {
+      words.forEach(w => w.classList.remove('visible'));
+      if (heroP) { heroP.classList.remove('animate'); heroP.style.opacity = '0'; }
+      if (heroBtns) { heroBtns.classList.remove('animate'); heroBtns.style.opacity = '0'; }
+      if (typingBox) { typingBox.classList.remove('animate'); typingBox.style.opacity = '0'; }
+    }
+    function triggerHero() {
+      resetHero();
+      if (heroSection) void heroSection.offsetWidth;
+      words.forEach((w, i) => setTimeout(() => w.classList.add('visible'), i * 100));
+      setTimeout(() => { if (heroP) heroP.classList.add('animate'); }, words.length * 100 + 100);
+      setTimeout(() => { if (heroBtns) heroBtns.classList.add('animate'); }, words.length * 100 + 250);
+      setTimeout(() => { if (typingBox) typingBox.classList.add('animate'); }, words.length * 100 + 450);
+    }
+    if (heroSection) {
+      new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) triggerHero(); });
+      }, { threshold: 0.3 }).observe(heroSection);
+    }
+
+    // ── STATS COUNTER ──
+    function animateCount(id, target, suffix, noComma) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const steps = 60, inc = target / steps;
+      let cur = 0, step = 0;
+      el.textContent = '0' + suffix;
+      const t = setInterval(() => {
+        step++; cur += inc;
+        if (step >= steps) { cur = target; clearInterval(t); }
+        el.textContent = (noComma ? Math.floor(cur) : Math.floor(cur).toLocaleString('en-IN')) + suffix;
+      }, 2000 / steps);
+    }
+    let statsAnimated = false;
+    const statsEl = document.getElementById('stats');
+    if (statsEl) {
+      new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting && !statsAnimated) {
+            statsAnimated = true;
+            animateCount('stat1', 5000, '+', false);
+            animateCount('stat2', 10, '+', true);
+            animateCount('stat3', 9, '+', true);
+            animateCount('stat4', 2015, '', true);
+          }
+        });
+      }, { threshold: 0.3 }).observe(statsEl);
+    }
+
+    // ── FORM SUBMIT ──
+    window.submitForm = async function () {
+      const form = document.getElementById('enquiry-form');
+      const sel = document.getElementById('courseSelect');
+      const succ = document.getElementById('success-msg');
+      const err = document.getElementById('error-msg');
+      const btn = document.getElementById('submitBtn');
+      if (!form) return;
+      succ.style.display = 'none';
+      err.style.display = 'none';
+      if (!form.querySelector('[name="name"]').value.trim()) {
+        form.querySelector('[name="name"]').focus(); return;
+      }
+      if (!/^[6-9][0-9]{9}$/.test(form.querySelector('[name="mobile"]').value.trim())) {
+        form.querySelector('[name="mobile"]').focus(); return;
+      }
+      if (!sel || sel.value === '') {
+        if (sel) sel.style.borderColor = '#e53935';
+        alert('Kripya ek course select karein!'); return;
+      }
+      btn.disabled = true;
+      btn.textContent = 'Bhej raha hai... ⏳';
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST', body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.reset();
+          if (sel) sel.style.borderColor = '#e0e0e0';
+          succ.style.display = 'block';
+          setTimeout(() => { succ.style.display = 'none'; }, 5000);
+        } else {
+          err.style.display = 'block';
+          setTimeout(() => { err.style.display = 'none'; }, 5000);
+        }
+      } catch {
+        err.style.display = 'block';
+        setTimeout(() => { err.style.display = 'none'; }, 5000);
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Submit Enquiry 🚀';
+      }
+    };
+
+    // ── CHATBOT ──
+    async function getResponse(msg) {
+      try {
+        const response = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: msg })
+        });
+        const data = await response.json();
+        return data.response || data.error || "Maaf kijiye, abhi system mein kuch dikkat hai.";
+      } catch (error) {
+        console.error("API Error:", error);
+        return "Maaf kijiye, connectivity mein dikkat hai. Kripya humein call karein: 9318490076";
+      }
+    }
+
+    // ── CHATBOT UI ──
+    (function () {
+      const style = document.createElement("style");
+      style.textContent = `
     #rce-chat-btn {
       position: fixed;
       bottom: 90px; right: 24px;
@@ -1605,8 +2571,8 @@ async function getResponse(msg) {
       #rce-chat-tooltip { display: none; }
     }
   `;
-  document.head.appendChild(style);
-  document.body.insertAdjacentHTML("beforeend", `
+      document.head.appendChild(style);
+      document.body.insertAdjacentHTML("beforeend", `
     <button id="rce-chat-btn" title="Humse poochho!">
       <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
     </button>
@@ -1629,61 +2595,62 @@ async function getResponse(msg) {
     </div>
   `);
 
-  const chatBtn = document.getElementById("rce-chat-btn");
-  const chatWin = document.getElementById("rce-chat-window");
-  const closeBtn = document.getElementById("rce-close");
-  const msgs = document.getElementById("rce-msgs");
-  const input = document.getElementById("rce-input");
-  const sendBtn = document.getElementById("rce-send");
-  const quick = document.getElementById("rce-quick");
-  let open = false;
+      const chatBtn = document.getElementById("rce-chat-btn");
+      const chatWin = document.getElementById("rce-chat-window");
+      const closeBtn = document.getElementById("rce-close");
+      const msgs = document.getElementById("rce-msgs");
+      const input = document.getElementById("rce-input");
+      const sendBtn = document.getElementById("rce-send");
+      const quick = document.getElementById("rce-quick");
+      let open = false;
 
-  const quickList = ["📚 Sabhi Courses","💰 Fees Batao","⏰ Timings","📝 Admission Kaise Karein","📞 Contact","🎓 Certificate Milega?","👤 Age Limit","💼 Job Milegi?"];
-  const renderQuick = () => { quick.innerHTML = quickList.map(q => `<button class="rce-qbtn" onclick="rceQ('${q}')">${q}</button>`).join(""); };
-  window.rceQ = (t) => { input.value = t; send(); };
-  const addMsg = (text, who) => {
-    const d = document.createElement("div");
-    d.className = `rce-msg ${who}`;
-    d.textContent = text;
-    msgs.appendChild(d);
-    msgs.scrollTop = msgs.scrollHeight;
-  };
-  const showTyping = () => {
-    const d = document.createElement("div");
-    d.className = "rce-typing"; d.id = "rce-typing";
-    d.innerHTML = `<div class="rce-dots"><span></span><span></span><span></span></div>`;
-    msgs.appendChild(d);
-    msgs.scrollTop = msgs.scrollHeight;
-  };
-  const hideTyping = () => { const t = document.getElementById("rce-typing"); if (t) t.remove(); };
-  
-  const send = async () => {
-    const txt = input.value.trim();
-    if (!txt) return;
-    addMsg(txt, "user");
-    input.value = "";
-    showTyping();
-    const botRes = await getResponse(txt);
-    hideTyping();
-    addMsg(botRes, "bot");
-  };
-  
-  const welcome = () => {
-    msgs.innerHTML = "";
-    addMsg("🙏 Namaste! Rajdhani Computer Education mein aapka swagat hai!\n\nMain aapki kaise madad kar sakta hoon?\n\nNeeche se option choose karein ya seedha poochhein! 😊", "bot");
-    renderQuick();
-  };
+      const quickList = ["📚 Sabhi Courses", "💰 Fees Batao", "⏰ Timings", "📝 Admission Kaise Karein", "📞 Contact", "🎓 Certificate Milega?", "👤 Age Limit", "💼 Job Milegi?"];
+      const renderQuick = () => { quick.innerHTML = quickList.map(q => `<button class="rce-qbtn" onclick="rceQ('${q}')">${q}</button>`).join(""); };
+      window.rceQ = (t) => { input.value = t; send(); };
+      const addMsg = (text, who) => {
+        const d = document.createElement("div");
+        d.className = `rce-msg ${who}`;
+        d.textContent = text;
+        msgs.appendChild(d);
+        msgs.scrollTop = msgs.scrollHeight;
+      };
+      const showTyping = () => {
+        const d = document.createElement("div");
+        d.className = "rce-typing"; d.id = "rce-typing";
+        d.innerHTML = `<div class="rce-dots"><span></span><span></span><span></span></div>`;
+        msgs.appendChild(d);
+        msgs.scrollTop = msgs.scrollHeight;
+      };
+      const hideTyping = () => { const t = document.getElementById("rce-typing"); if (t) t.remove(); };
 
-  chatBtn.addEventListener("click", () => {
-    open = !open;
-    chatWin.classList.toggle("open", open);
-    if (open) welcome();
-  });
-  closeBtn.addEventListener("click", () => { open = false; chatWin.classList.remove("open"); });
-  sendBtn.addEventListener("click", send);
-  input.addEventListener("keydown", e => { if (e.key === "Enter") send(); });
-  renderQuick();
-})();
-</script>
+      const send = async () => {
+        const txt = input.value.trim();
+        if (!txt) return;
+        addMsg(txt, "user");
+        input.value = "";
+        showTyping();
+        const botRes = await getResponse(txt);
+        hideTyping();
+        addMsg(botRes, "bot");
+      };
+
+      const welcome = () => {
+        msgs.innerHTML = "";
+        addMsg("🙏 Namaste! Rajdhani Computer Education mein aapka swagat hai!\n\nMain aapki kaise madad kar sakta hoon?\n\nNeeche se option choose karein ya seedha poochhein! 😊", "bot");
+        renderQuick();
+      };
+
+      chatBtn.addEventListener("click", () => {
+        open = !open;
+        chatWin.classList.toggle("open", open);
+        if (open) welcome();
+      });
+      closeBtn.addEventListener("click", () => { open = false; chatWin.classList.remove("open"); });
+      sendBtn.addEventListener("click", send);
+      input.addEventListener("keydown", e => { if (e.key === "Enter") send(); });
+      renderQuick();
+    })();
+  </script>
 </body>
+
 </html>
